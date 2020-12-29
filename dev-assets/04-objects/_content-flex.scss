@@ -1,0 +1,18 @@
+.o-content-flex{
+    display: flex;
+    justify-content: center;
+
+&--items{
+    align-items: center;
+}
+}
+
+.o-content-margin{
+    margin: 40px 0;
+    @include device-small{
+        &--20{
+            margin-bottom: 20px;
+        }
+
+    }
+}

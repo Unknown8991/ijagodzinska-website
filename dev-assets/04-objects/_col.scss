@@ -1,0 +1,316 @@
+.o-col{
+    width: 100%; 
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    &--sm1{
+        @include device-small{
+            flex: 0 0 8.333333%;
+            max-width: 8.333333%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm2{
+        @include device-small{
+            flex: 0 0 16.666666%;
+            max-width: 16.666666%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+
+
+    &--sm3{
+        @include device-small{
+            flex: 0 0 25%;
+            max-width: 25%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+
+    &--sm4{
+        @include device-small{
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm5{
+        @include device-small{
+            flex: 0 0 41.666666%;
+            max-width: 41.666666%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+
+    &--sm6{
+        @include device-small{
+            flex: 0 0 50%;
+            max-width: 50%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm7{
+        @include device-small{
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm8{
+         @include device-small{
+            flex: 0 0 66.666666%;
+            max-width: 66.666666%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm9{
+        @include device-small{
+            flex: 0 0 75%;
+            max-width: 75%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm10{
+        @include device-small{
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm11{
+        @include device-small{
+            flex: 0 0 91.666666%;
+            max-width: 91.666666%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+    &--sm12{
+        @include device-small{
+            flex: 0 0 100%;
+            max-width: 100%;
+            @include col-padding;
+            box-sizing: border-box;
+        }
+    }
+        
+    
+    //DEVICE 768 - 992
+        &--md1{
+            @include device-medium{
+                flex: 0 0 8.333333%;
+                max-width: 8.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md2{
+            @include device-medium{
+                flex: 0 0 16.666666%;
+                max-width: 16.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+  
+        &--md3{
+            @include device-medium{
+                flex: 0 0 25%;
+                max-width: 25%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+        &--md4{
+            @include device-medium{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md5{
+            @include device-medium{
+                flex: 0 0 41.666666%;
+                max-width: 41.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+        &--md6{
+            @include device-medium{
+                flex: 0 0 50%;
+                max-width: 50%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md7{
+            @include device-medium{
+                flex: 0 0 58.333333%;
+                max-width: 58.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md8{
+            @include device-medium{
+                flex: 0 0 66.666666%;
+                max-width: 66.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md9{
+            @include device-medium{
+                flex: 0 0 75%;
+                max-width: 75%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md10{
+            @include device-medium{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md11{
+            @include device-medium{
+                flex: 0 0 91.666666%;
+                max-width: 91.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--md12{
+            @include device-medium{
+                flex: 0 0 100%;
+                max-width: 100%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+        // DEVICE LARGE
+
+        &--lg1{
+            @include device-large{
+                flex: 0 0 8.333333%;
+                max-width: 8.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg2{
+            @include device-large{
+                flex: 0 0 16.666666%;
+                max-width: 16.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+  
+        &--lg3{
+            @include device-large{
+                flex: 0 0 25%;
+                max-width: 25%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+        &--lg4{
+            @include device-large{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg5{
+            @include device-large{
+                flex: 0 0 41.666666%;
+                max-width: 41.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+        &--lg6{
+            @include device-large{
+                flex: 0 0 50%;
+                max-width: 50%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg7{
+            @include device-large{
+                flex: 0 0 58.333333%;
+                max-width: 58.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg8{
+            @include device-large{
+                flex: 0 0 66.666666%;
+                max-width: 66.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg9{
+            @include device-large{
+                flex: 0 0 75%;
+                max-width: 75%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg10{
+            @include device-large{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg11{
+            @include device-large{
+                flex: 0 0 91.666666%;
+                max-width: 91.666666%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+        &--lg12{
+            @include device-large{
+                flex: 0 0 100%;
+                max-width: 100%;
+                @include col-padding;
+                box-sizing: border-box;
+            }
+        }
+
+
+        
+
+}

@@ -1,0 +1,19 @@
+.o-container { //kontener objekty
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter;
+    padding-right: $gutter; 
+    width: 100%;
+    max-width: 1140px;
+    box-sizing: border-box;
+}
+// 100% szerokości 
+.o-container-fluid {
+    width:100%;
+    padding-right: $gutter;
+    padding-left: $gutter;
+    margin-right:auto;
+    margin-left:auto;
+    box-sizing: border-box;
+
+}

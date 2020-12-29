@@ -1,0 +1,48 @@
+html { 
+    background: url(/images/half-base-image.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   
+  }
+
+.header{
+  width: 100%;
+  color: $white;
+}
+  
+.list{
+  text-transform: uppercase;
+  list-style: none;
+  
+  &__label{
+    color: $white;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    margin-bottom: 4px;
+    margin-right:-4px ;
+  }
+}
+
+.header-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  @include device-small{
+    font-size: $ft-small + 2px;
+  }
+}
+.label-content{
+  width: 100%;
+  
+}
+.label-position{
+  height: 300px;
+  align-items: center;
+}
+.logo{
+  width: 100px;
+}
+

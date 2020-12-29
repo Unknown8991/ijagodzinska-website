@@ -1,0 +1,26 @@
+//Colors
+$white: white;
+$black: black;
+$golden: #A77956;
+
+//Font-sizes
+$ft-base: 16px;
+$ft-small: $ft-base * 0.75;
+$ft-medium: $ft-base * 2;
+$ft-large: $ft-base * 3;
+
+//Space line
+$line-height-base: 1.5;
+$line-height-sm: 1;
+$line-height-lg: 1.8;
+
+//Net margin vertical horizontal
+$grid-base: 10px;
+$gutter: $grid-base * 1.5;
+
+//Radius 
+$border-radius: 50px;
+
+//Breakpoints device size
+$bp-medium: '768px'; // tablet, small pc
+$bp-large: '992px'; //desktop

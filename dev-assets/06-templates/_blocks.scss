@@ -1,0 +1,29 @@
+.blocks-add-content{
+    align-items: center;
+    background-color: $black;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+    &--white{
+        background-color: $white;
+    }
+    @include device-small{
+        
+        
+    }
+}
+.block{
+    border: 1px solid $white;
+    color: $white;
+    padding: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+    &--golden{
+        border: 1px solid $golden;
+    }
+    @include device-small{
+       
+    }
+}

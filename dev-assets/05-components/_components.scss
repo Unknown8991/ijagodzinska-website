@@ -1,0 +1,15 @@
+// INPUTS , BUTTON , HEADING , CORNERS
+.c-main-button{
+    background: gray;
+    width: 55%;
+    opacity: 0.7;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    color: $white;
+    text-transform: uppercase;
+    &:hover{
+        background-color: black;
+        transition: background-color .75s ease-out;
+    }
+}

@@ -1,0 +1,40 @@
+.article-content{
+    align-items: center;
+    background-color: $black;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+    &--white{
+        background-color: $white;
+    }
+  
+}
+.heading{
+    font-size: $ft-medium;
+    color: $golden;
+    text-align: center;
+}
+.picture{
+    border: 1px solid $white;
+    height: 300px;
+    width: 80%;
+    &--black{
+        border:1px solid $black;
+    }
+}
+
+.description{
+    color: $white;
+    font-size: $ft-base;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: justify;
+    &--black{
+        color: $black;
+    }
+
+}
+.orders{
+    order: 2;
+}

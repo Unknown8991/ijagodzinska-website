@@ -1,0 +1,52 @@
+.footer{
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+&__contact{
+    color: $golden;
+}
+
+&__divider{
+    height: 1px;
+    background-color: $golden;
+    width: 100%;
+
+}
+&__name{
+    font-weight: bold;
+}
+&__specialist{
+color: $golden;
+}
+&__phone{
+color: $golden;
+font-weight: bold;
+}
+&__social-media{
+    text-align: center;
+    color: $golden ;
+}
+&--column{
+    display: flex;
+    flex-direction: column;
+}
+}
+.icon-social-media{
+    height: 150px;
+    display: flex;
+    font-size: 60px;
+    &__graphic{
+        color: $golden;
+        
+        &--right{
+            justify-content: right;
+        }
+        &--left{
+            justify-content: left;
+        }
+    }
+    
+}
