@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prod-assets/style.css">
+
+
+    <!--Font Awesome libery-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+
+<body style="background: white; height: 100vh;">
+    <!--Menu-->
+    <div class="o-container ">
+        <div class="o-row">
+            <header class="header">
+                <ul class="o-col--sm12 header-row">
+                    <li class="list">
+                        <a class="list__relay list__relay--revers" href="">o mnie</a>
+                    </li>
+                    <li class="list">
+                        <a class="list__relay list__relay--revers" href="">galeria</a>
+                    </li>
+                    <li class="list">
+                        <a class="list__relay list__relay--revers" href="">oferta</a>
+                    </li>
+                    <li class="list">
+                        <a class="list__relay list__relay--revers" href="#contact">kontakt</a>
+                    </li>
+                </ul>
+            </header>
+        </div>
+    </div>
+    <!--Floating button-->
+    <a href="index.html">
+        <button class="floating-btn floating-btn__up--background-reverse">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+    </a>
+    <div class="o-container syrius-black">
+
+        <div class="form">
+            <div class="o-row main-form-signin">
+                <div class="o-col--md12 o-col--sm12 o-content-flex information-text-form">
+                    <div class="information-text-form information-text-form__header">Zapisz się na wizytę już teraz!
+                    </div>
+                    <div class="information-text-form  information-text-form__description">Wypełnij poniższy formularz.
+                        Po wprowadzeniu danych kliknij przycisk Zapisz.</div>
+                </div>
+                <div class="o-col--md12 o-col--sm12">
+
+                    <div class="o-col--md4 o-col--sm8 information-text-form--bold-labels">Dostępne
+                        zabiegi:</div>
+                </div>
+
+                <div class="o-col--md12 o-col--sm12 o-content-flex-md">
+                    <select class="dropdown-select" name="treatments" id="treatments-select">
+                        <option value="">Wybierz opcję:</option>
+                        <optgroup label="Paznokcie">
+                            <option value="Hybryda">Hybryda</option>
+                        <optgroup label="Medycyna estetyczna">
+                            <option value="Masaż">Masaż</option>
+                            <option value="poprawka">Poprawka</option>
+                            <option value="kwas">Kwas hialuronowy</option>
+                            <option value="kwas">Kwas medyczny</option>
+                            <option value="oxybrazja">Oxybrazja</option>
+                    </select>
+                </div>
+                <div class="o-col--md12 o-col--sm12">
+
+                    <div class="o-col--md4 o-col--sm9 information-text-form--bold-labels">Dane kontaktowe:</div>
+                </div>
+                <div class="o-col--md4 o-col--sm12">
+                    <input class="input-form" type="text" placeholder="Imię">
+                </div>
+                <div class="o-col--md6 o-col--sm12">
+                    <input class="input-form" type="text" placeholder="Nazwisko">
+                </div>
+                <div class="o-col--md4 o-col--sm12">
+                    <input class="input-form" type="text" placeholder="Nr telefonu" maxlength="9">
+                </div>
+                <div class="o-col--md6 o-col--sm12 date-pack ">
+                    <div class="o-col--md6 o-col--sm7 o-content-revert-margin">
+                        <input class="input-form input-form--center-text" type="date">
+                    </div>
+                    <div class="o-col--md6 o-col--sm5 o-content-revert-margin">
+                        <input class="input-form input-form--center-text" type="time">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="o-col--sm12 o-col--md12 o-content-flex">
+                <a class="o-col--md12 o-col--sm12 o-content-flex decoration-none o-content-margin--20"
+                    href="signin.html">
+                    <button class="c-main-button c-main-button--ingallery">Zapisz się na wizytę</button>
+                </a>
+            </div>
+        </div>
+
+</body>
+
+</html>

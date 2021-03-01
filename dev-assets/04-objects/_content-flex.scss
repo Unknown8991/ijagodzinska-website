@@ -1,18 +1,48 @@
 .o-content-flex{
     display: flex;
     justify-content: center;
+    @include device-small{
+        &--small{
+            flex-direction: column;
+        }
+    }
 
 &--items{
     align-items: center;
 }
+
+}
+.o-content-flex-md{
+@include device-medium{
+        display: flex;
+justify-content: center;
+    }
 }
 
 .o-content-margin{
-    margin: 40px 0;
+    margin: 100px 0;
+    &--medium-top60{
+        margin-top: 60px;
+    }
+    &--medium-top30{
+        margin-top: 30px;
+    }
     @include device-small{
         &--20{
-            margin-bottom: 20px;
+           margin-bottom: 20px;
         }
-
+       
+        &--180{
+           margin-top: 50px;
+        }
+        &--40{
+            margin: 40px 0px;
+        }
     }
+    &--30{
+        margin-bottom: 30px;
+    }
+}
+.o-content-revert-margin{
+    margin: 0px -15px;
 }

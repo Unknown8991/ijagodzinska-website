@@ -7,6 +7,10 @@
     padding-top: 80px;
 &__contact{
     color: $golden;
+    font-size: $ft-medium;
+    @include device-small{
+        font-size: $ft-base+10px;
+    }
 }
 
 &__divider{
@@ -17,17 +21,36 @@
 }
 &__name{
     font-weight: bold;
+    font-size: 30px;
+    
+    @include device-small{
+        font-size:24px ;
+        margin-bottom: 6px;
+    }
 }
 &__specialist{
 color: $golden;
+font-size: 24px;
+@include device-small{
+    font-size:18px ;
+    margin-bottom: 6px;
+}
 }
 &__phone{
 color: $golden;
-font-weight: bold;
+font-size: 22px;
+@include device-small{
+    font-weight: bold;
+    font-size:18px ;
+}
 }
 &__social-media{
     text-align: center;
     color: $golden ;
+    font-size: $ft-medium;
+    @include device-small{
+        font-size: $ft-base+10px;
+    }
 }
 &--column{
     display: flex;
@@ -38,6 +61,7 @@ font-weight: bold;
     height: 150px;
     display: flex;
     font-size: 60px;
+    
     &__graphic{
         color: $golden;
         

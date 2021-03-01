@@ -1,15 +1,20 @@
 html { 
-    background: url(/images/half-base-image.jpg) no-repeat center center fixed; 
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color:$golden $black ;
+  }
+  .madame{
+    background: url(/images/main-photo1.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-   
   }
 
 .header{
   width: 100%;
   color: $white;
+
 }
   
 .list{
@@ -17,13 +22,52 @@ html {
   list-style: none;
   
   &__label{
-    color: $white;
+    color: $golden;
     display: flex;
     justify-content: end;
     text-align: end;
-    margin-bottom: 4px;
+    margin-bottom: 14px;
     margin-right:-4px ;
+    @include device-small{
+      margin-bottom: 24px;
+    }
   }
+  &__relay{
+    color: $golden;
+    text-decoration: none;
+    font-size: $ft-base+4px;
+    @include device-small{
+      font-size: $ft-base;
+    }
+    &--revers{
+      color: $golden;
+    }
+  }
+  @include device-medium{
+    &--font64{
+      font-size: $ft-base*4;
+    } 
+    &--font40{
+      font-size: ($ft-base+4px)*2;
+    }
+    &--font48{
+      font-size: $ft-base*3;
+    }
+  }
+
+
+  @include device-small{
+    &--font22{
+      font-size: $ft-base+6px;
+    } 
+    &--font20{
+      font-size: $ft-base+4px;
+    }
+    &--font18{
+      font-size: $ft-base+2px;
+    }  
+  }
+  
 }
 
 .header-row{
@@ -33,16 +77,35 @@ html {
   @include device-small{
     font-size: $ft-small + 2px;
   }
+
 }
 .label-content{
   width: 100%;
-  
+  margin-top: 100px;
+  @include device-small{
+    margin-top: 80px;
+  }
 }
 .label-position{
-  height: 300px;
+  height: 100vh;
   align-items: center;
+  @include device-small{
+   // padding: 80px 0px;
+   height: 770px;
+  }
+  @media (max-height:667px) {
+    height: 620px;
+  }
+}
+.position-end{
+  @include device-medium{
+        display: flex;
+        justify-content: end;
+  }
 }
 .logo{
-  width: 100px;
+  width: 10%;
+  @include device-small{
+    width: 100px; 
+  }
 }
-

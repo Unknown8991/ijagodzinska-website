@@ -1,0 +1,114 @@
+.profile-section{
+    margin-top: 60px;
+    width: 100%;
+    padding: 90px;
+    @include device-small{
+        padding: 0px 50px;
+    }
+    &__photo{
+        width: 100%;
+        &--circle{
+            border-radius: 100%;
+            border: 2px solid $golden;
+            padding: 0px;
+            @include device-small{
+                width: 100%;
+                
+            }
+        }
+    }
+    &__describe{
+        color: $golden;
+        text-align: center;
+        align-items: center;
+        font-size: $ft-base+2px;
+        justify-content: end;
+    }
+    &__label{
+        font-size:$ft-base + 24px ;
+        font-weight: bold;
+        @include device-small{
+            font-size: $ft-base + 10px;
+            margin-top: 30px;
+        }
+    }
+    &__icons{
+        color: $golden;
+        font-size: $ft-base;
+        justify-content: space-evenly;
+        @include device-small{
+            font-size: $ft-base+2px;
+        }
+    }
+}
+.profile-box{
+    width:100%;
+    border: 1px solid $golden;
+    margin-top: 40px;
+    width: 100%;
+    padding: 90px;
+    @include device-small{
+        border: none;
+        padding: 0px;
+    }
+}
+.profile-photo{
+    width: 100%;
+    padding: 0px;
+    @include device-small{
+
+    }
+    &--size{
+        width: 100%;
+        border: 1px solid $golden;
+    }
+}
+.profile-describe{
+    text-align: center;
+    font-size: $ft-base;
+    color: $golden;
+@include device-small{
+    font-size: $ft-base+1px;
+}
+}
+.about-label{
+    font-size: $ft-base+20px;
+    margin-bottom: 30px;
+    color: $golden;
+    @include device-small{
+        margin: 30px 0px;
+    }
+}
+.icons-box{
+    margin-top: 10px;
+    border: 1px solid $golden;
+    font-size: $ft-base*2;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    color: $golden;
+    &--size{
+        height: 100%;
+        font-size: $ft-base*3;
+        margin-top: 40px;
+    }
+    &:hover{
+        border: 1px solid $black;
+        color: $black;
+        transition: color .4s ease-in-out;
+    }
+}
+.section-photo-cert{
+    
+    padding: 0px;
+
+    &--size{
+        border-radius: 2px solid $golden;
+        border-radius:20px ;
+        width:50vh;
+        @include device-small{
+            width: 100%;
+        }
+    }
+}
+

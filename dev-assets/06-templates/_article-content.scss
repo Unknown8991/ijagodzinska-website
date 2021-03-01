@@ -8,15 +8,21 @@
     &--white{
         background-color: $white;
     }
+    @include device-small{
+        &--size{
+       //     margin-top: 290px;
+        }
+    }
   
 }
 .heading{
     font-size: $ft-medium;
     color: $golden;
     text-align: center;
+    margin: 40px 0;
 }
 .picture{
-    border: 1px solid $white;
+    border: 1px solid $golden;
     height: 300px;
     width: 80%;
     &--black{
@@ -37,4 +43,10 @@
 }
 .orders{
     order: 2;
+    @include device-medium{
+        &--first-picture{
+            order: 0;
+        }
+    }
 }
+

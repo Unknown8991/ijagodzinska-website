@@ -1,0 +1,97 @@
+.offer-information{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 200px;
+width: 100%;
+@include device-small{
+    margin-top:40px ;
+}
+&--smalldesc{
+    margin-top: 40px;
+    color: $golden;
+    font-size: $ft-base+10px;
+    text-align: center;
+    @include device-small{
+        font-size: $ft-base+3px;
+    }
+}
+}
+.offer-section-name{
+    color: $golden;
+    display: flex;
+    font-size: $ft-base*3;
+    justify-content: center;
+    text-align: center;
+}
+.offer-box{
+    margin: 100px 0px;
+}
+.dropdown-list{
+    background-color: $white;
+    color: $golden;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid $golden;
+    text-align: left;
+    outline: none;
+    font-size: $ft-base;
+    transition: 0.4s;
+    text-align: center;
+}
+.active, .dropdown-list:hover{
+    background-color:$golden;
+    color: $white;
+}
+.dropdown-list:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: $black;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+.options{
+    padding: 0 18px;
+    display: none;
+    background-color: $white;
+    overflow: hidden;
+}
+.ul-list{
+    text-decoration: none;
+    list-style: none;
+    color: $golden;
+    font-size: $ft-base+4px;
+    padding-left: 0px;
+    margin:20px 0px;
+    @include device-small{
+        font-size: $ft-base;
+    }
+    &--text{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+&--name{
+    display: flex;
+    font-weight: bold;
+    justify-content: left;
+    margin-top:40px;
+    @include device-small{
+        margin-top: 20px;
+    }
+}
+&--cost{
+    display: flex;
+    font-style: italic;
+    justify-content: right;
+    margin-top: 40px;
+    @include device-small{
+        margin-top: 20px;
+    }
+}
+}

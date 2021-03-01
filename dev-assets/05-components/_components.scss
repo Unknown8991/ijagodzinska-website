@@ -1,15 +1,150 @@
 // INPUTS , BUTTON , HEADING , CORNERS
 .c-main-button{
-    background: gray;
-    width: 55%;
-    opacity: 0.7;
-    border: none;
+    background: black;
+    border: 2px solid $golden;
     border-radius: 30px;
-    height: 40px;
     color: $white;
+    font-size: $ft-base;
+    height: 50px;
+    padding: 0px 50px;
     text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    @include device-small{
+        width: 80%;
+        font-size: $ft-base - 2px;
+        height: 40px;
+        padding: 0px 20px;
+    }
+    &--ingallery{
+        background: $white;
+        color: $golden;
+        border: 2px solid $golden;
+        @include device-medium{
+            width: 30%;
+        }
+        &:hover{
+            background: $golden;
+            color: $white;
+        }
+        
+    }
+    &--signin{
+        background: black;
+        border: 3px solid $golden;
+        width: 55%;
+        font-size: $ft-base;
+        opacity: 0.7;   
+        border-radius: 30px;
+        height: 40px;
+        color: $white;
+        text-transform: uppercase;
+        margin: 40px 0px;
+        @include device-small{
+            margin: 18px 0px;
+        }
     &:hover{
-        background-color: black;
+        background-color: $white ;
         transition: background-color .75s ease-out;
     }
+    }
+    &:hover{
+        border: 2px solid $white;
+        transition: background-color .75s ease-out;
+    }
+    &--gallery{
+        background: $white;
+        border: 1px solid $golden;
+        border-radius: 0px;
+        color: $golden;
+        font-size: $ft-base - 2px;
+        height: 50px;    
+        text-transform: uppercase;
+        width: 100%;  
+        @include device-small{
+            width: 80%;
+            font-size: $ft-base - 2px;
+            height: 40px;
+        }  
+        &:hover{
+            background: $black;
+            border: 1px solid $white;
+            color: $white;
+            transition: background .3s ease-out ;
+        }
+    }
+}
+.c-decoration{
+    text-decoration: none;
+    color: $white;
+    &--change-color{
+        color: $golden;
+    }
+}
+.floating-btn{
+    width: 70px;
+    height: 70px;
+    background: $black;
+    border: 2px solid $golden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: $golden;
+    font-size: $ft-base+25px;
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    
+    &:hover{
+        cursor: pointer;
+        background: $golden;
+        color: $black;
+        transition: background .3s ease;
+    }
+    @include device-small{
+        width: 65px;
+        height: 65px;
+        font-size: $ft-base*2;
+        box-shadow: 1px 1px 3px $golden;
+    }
+    &__up{
+        width: 70px;
+    height: 70px;
+    background: $black;
+    border: 2px solid $golden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: $golden;
+    font-size: $ft-base+25px;
+    position: fixed;
+    right: 15px;
+    bottom: 100px;
+    &:hover{
+        cursor: pointer;
+        background: $golden;
+        color: $black;
+        transition: background .3s ease;
+    }
+    @include device-small{
+        width: 65px;
+        height: 65px;
+        font-size: $ft-base*2;
+        box-shadow: 1px 1px 3px $golden;
+    }
+    &--home{
+        bottom: 20px;
+    }
+    &--background-reverse{
+        background:$white ;
+        color:$black ;
+    }
+    }
+}
+.decoration-none{
+    text-decoration: none;
 }
