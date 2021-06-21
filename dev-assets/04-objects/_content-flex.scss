@@ -2,8 +2,18 @@
     display: flex;
     justify-content: center;
     @include device-small{
+        &--small2{
+            display: flex;
+    justify-content: center;
+        }
         &--small{
             flex-direction: column;
+        }
+    }
+    @include device-medium{
+        &--medium{
+            display: flex;
+    justify-content: center;
         }
     }
 
@@ -11,6 +21,9 @@
     align-items: center;
 }
 
+}
+.o-text-center{
+    text-align: center;
 }
 .o-content-flex-md{
 @include device-medium{
@@ -26,6 +39,15 @@ justify-content: center;
     }
     &--medium-top30{
         margin-top: 30px;
+    }
+    &--medium-top140{
+        margin-top: 140px;
+    }
+    &--all-mar60{
+        margin: 60px 0px;
+    }
+    &--all-bottom-10{
+        margin-bottom: 10px;
     }
     @include device-small{
         &--20{

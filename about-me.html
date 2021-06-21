@@ -9,7 +9,11 @@
 
     <!--Font Awesome libery-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--Google fonts-->
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -50,7 +54,7 @@
     </a>
     <div class="o-container">
         <div class="o-row">
-            <div class="profile-box o-content-flex o-content-flex--small o-content-flex--items">
+            <div class="profile-box o-content-flex--medium o-content-flex--small o-content-flex--items ">
                 <div class="o-col--md6 o-col--sm12">
                     <div class="profile-photo o-col--md12 o-col--sm12">
                         <img class="profile-photo--size" src="/images/gallery/iza.jpg" alt="">
@@ -85,7 +89,23 @@
             </div>
         </div>
         <div class="o-row">
-            <div class="o-col--md12 o-col--sm12 o-content-flex o-content-margin--medium-top30 about-label">Certyfikaty
+            <div class="o-col--md12 o-col--sm12 o-content-flex o-content-margin--medium-top140 about-label">Tak pracuję!
+            </div>
+            <div class="o-col--md6 o-col--sm12 photo-box">
+                <img class="picture-style picture-style__size" src="/images/img-aboutme/IMG_4530.jpg" alt="">
+            </div>
+            <div class="o-col--md6 o-col--sm12 photo-box">
+                <img class="picture-style picture-style__size" src="/images/img-aboutme/IMG_4539.jpg" alt="">
+            </div>
+            <div class="o-col--md6 o-col--sm12 photo-box">
+                <img class="picture-style picture-style__size" src="/images/img-aboutme/IMG_4538.jpg" alt="">
+            </div>
+            <div class="o-col--md6 o-col--sm12 photo-box">
+                <img class="picture-style picture-style__size" src="/images/img-aboutme/IMG_4533.jpg" alt="">
+            </div>
+        </div>
+        <div class="o-row">
+            <div class="o-col--md12 o-col--sm12 o-content-flex o-content-margin--medium-top140 about-label">Certyfikaty
             </div>
             <div class="o-col--md12 o-col--sm12 o-content-flex">
                 <ul class="ul-list ul-list--text">
@@ -97,12 +117,38 @@
                     <li>Zastosowanie toksyny botulinowej</li>
                 </ul>
             </div>
-            <div class="o-col--md12 o-col--sm12 section-photo-cert o-content-flex">
+            <div class="o-col--md12 o-col--sm12 o-content-flex o-content-margin--all-bottom-10">
+                <button id="btn-open-cert" class="c-main-button c-main-button__ingallery ">Zobacz
+                    certyfikaty</button>
+            </div>
+            <div id="cert-section" class="o-col--md12 o-col--sm12 section-photo-cert o-content-flex">
                 <img class="section-photo-cert--size" src="/images/gallery/cert.jpg" alt="">
             </div>
         </div>
     </div>
+    <script>
+        const btn = document.querySelector('#btn-open-cert')
+        console.log(btn)
+        let counter = 1;
+        btn.addEventListener("click", function () {
 
+            counter++;
+            const cert = document.querySelector('#cert-section');
+
+            console.log(counter);
+            if (counter % 2 == 0) {
+                cert.style.display = "flex"
+                cert.style.paddingBottom = "20px"
+                btn.scrollIntoView('#cert-section')
+                btn.textContent = "Schowaj certyfikaty"
+            } else {
+                cert.style.display = "none"
+                btn.textContent = "Zobacz certyfikaty"
+                //btn.style.marginBottom = "-10px"
+
+            }
+        })
+    </script>
 </body>
 
 </html>

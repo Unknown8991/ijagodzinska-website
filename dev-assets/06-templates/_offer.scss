@@ -1,9 +1,11 @@
 .offer-information{
-display: flex;
+//display: flex;
 flex-direction: column;
-justify-content: center;
+//justify-content: center;
 margin-top: 200px;
 width: 100%;
+//font-family: 'Cormorant', serif;
+font-family: 'Bellefair', serif;
 @include device-small{
     margin-top:40px ;
 }
@@ -36,16 +38,21 @@ width: 100%;
     border: 1px solid $golden;
     text-align: left;
     outline: none;
-    font-size: $ft-base;
+    font-size: $ft-base+2px;
     transition: 0.4s;
     text-align: center;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
+    //font-weight: 800;
 }
 .active, .dropdown-list:hover{
     background-color:$golden;
     color: $white;
+    
 }
 .dropdown-list:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    
+    //content: '\02795'; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     color: $black;
     float: right;
@@ -53,7 +60,7 @@ width: 100%;
   }
   
   .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+   // content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
 .options{
     padding: 0 18px;
@@ -68,6 +75,8 @@ width: 100%;
     font-size: $ft-base+4px;
     padding-left: 0px;
     margin:20px 0px;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
     @include device-small{
         font-size: $ft-base;
     }
@@ -78,7 +87,7 @@ width: 100%;
     }
 &--name{
     display: flex;
-    font-weight: bold;
+    //font-weight: bold;
     justify-content: left;
     margin-top:40px;
     @include device-small{
@@ -90,6 +99,7 @@ width: 100%;
     font-style: italic;
     justify-content: right;
     margin-top: 40px;
+    font-size: $ft-base+2px;
     @include device-small{
         margin-top: 20px;
     }

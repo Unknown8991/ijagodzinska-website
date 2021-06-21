@@ -1,33 +1,45 @@
 // INPUTS , BUTTON , HEADING , CORNERS
 .c-main-button{
     background: black;
-    border: 2px solid $golden;
+    border: 1px solid $golden;
     border-radius: 30px;
     color: $white;
     font-size: $ft-base;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
     height: 50px;
     padding: 0px 50px;
     text-transform: uppercase;
     width: 100%;
     cursor: pointer;
+    transition: border .3s ease-out, background .3s ease-in;
+    
     @include device-small{
         width: 80%;
         font-size: $ft-base - 2px;
         height: 40px;
         padding: 0px 20px;
     }
-    &--ingallery{
+    &__ingallery{
         background: $white;
         color: $golden;
-        border: 2px solid $golden;
-        @include device-medium{
-            width: 30%;
-        }
+        border: 1px solid $golden;
+        
         &:hover{
             background: $golden;
             color: $white;
+            border: 2px solid $white !important ;
+            
+           
         }
-        
+        @include device-medium{
+            width: 30%;
+        }
+        &--popup-save{
+            width: 50%;
+            height: 35px;
+        }
+
     }
     &--signin{
         background: black;
@@ -49,8 +61,9 @@
     }
     }
     &:hover{
-        border: 2px solid $white;
-        transition: background-color .75s ease-out;
+        border: 2px solid $black;
+        transition: border .3s ease-out, background .3s ease-in;
+        
     }
     &--gallery{
         background: $white;
@@ -60,14 +73,17 @@
         font-size: $ft-base - 2px;
         height: 50px;    
         text-transform: uppercase;
-        width: 100%;  
+        width: 100%; 
+        //font-family: 'Cormorant', serif; 
+        font-family: 'Bellefair', serif;
+        transition: background .5s ease-out ;
         @include device-small{
             width: 80%;
             font-size: $ft-base - 2px;
             height: 40px;
         }  
         &:hover{
-            background: $black;
+            background: $golden;
             border: 1px solid $white;
             color: $white;
             transition: background .3s ease-out ;
@@ -96,7 +112,7 @@
     position: fixed;
     right: 15px;
     bottom: 20px;
-    
+    outline: none;
     &:hover{
         cursor: pointer;
         background: $golden;
@@ -124,6 +140,7 @@
     position: fixed;
     right: 15px;
     bottom: 100px;
+    outline: none;
     &:hover{
         cursor: pointer;
         background: $golden;

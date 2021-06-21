@@ -4,17 +4,25 @@ html {
     scrollbar-color:$golden $black ;
   }
   .madame{
-    background: url(/images/main-photo1.jpg) no-repeat center center fixed; 
+    background: url(/images/main-photo1.jpg) no-repeat center center fixed;
+    background-size: cover; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    
   }
+  
 
 .header{
   width: 100%;
   color: $white;
-
+  font-family: 'Bellefair', serif;
+  font-style:normal;
+  //font-weight: 800;
+  
 }
   
 .list{
@@ -22,12 +30,18 @@ html {
   list-style: none;
   
   &__label{
-    color: $golden;
+    color: #5b584f;
+    // #5b584f
     display: flex;
     justify-content: end;
     text-align: end;
     margin-bottom: 14px;
     margin-right:-4px ;
+    text-transform:none;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-style: italic;
     @include device-small{
       margin-bottom: 24px;
     }
@@ -35,37 +49,57 @@ html {
   &__relay{
     color: $golden;
     text-decoration: none;
-    font-size: $ft-base+4px;
+    font-size: $ft-base+6px;
+    &:hover{
+      color: $white;
+      transition: color .2s ease;
+    }
     @include device-small{
       font-size: $ft-base;
     }
     &--revers{
       color: $golden;
+      &:hover{
+        color: $black;
+      }
     }
   }
   @include device-medium{
     &--font64{
       font-size: $ft-base*4;
     } 
-    &--font40{
-      font-size: ($ft-base+4px)*2;
+    &--font46{
+      font-size: ($ft-base+7px)*2;
     }
     &--font48{
       font-size: $ft-base*3;
+    }
+    &--font50{
+      font-size: ($ft-base+9px)*2;
+    }
+    &--font60{
+      font-size: ($ft-base+14px)*2;
     }
   }
 
 
   @include device-small{
-    &--font22{
-      font-size: $ft-base+6px;
-    } 
+    
     &--font20{
-      font-size: $ft-base+4px;
+      font-size: $ft-base+3px;
     }
-    &--font18{
-      font-size: $ft-base+2px;
-    }  
+    &--font22{
+      font-size: $ft-base+5px;
+    }
+    &--font24{
+      font-size: $ft-base+7px;
+    }
+    &--font26{
+      font-size: $ft-base+8px;
+    } 
+    &--font19{
+      font-size: $ft-base+3px;
+    }     
   }
   
 }
@@ -82,6 +116,7 @@ html {
 .label-content{
   width: 100%;
   margin-top: 100px;
+
   @include device-small{
     margin-top: 80px;
   }

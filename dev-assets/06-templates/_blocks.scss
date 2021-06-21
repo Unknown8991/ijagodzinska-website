@@ -4,7 +4,8 @@
     display: flex;
     height: 100%;
     width: 100%;
-    
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
     &--white{
         background-color: $white;
     }
@@ -16,6 +17,9 @@
         color: $golden;
         font-size: $ft-base*2;
         padding-top: 40px;
+        //font-family: 'Cormorant', serif;
+        font-family: 'Bellefair', serif;
+        font-style: italic;
         @include device-small{
             padding-top: 20px;
         }
@@ -26,8 +30,12 @@
     color: $white;
     padding: 60px;
     text-align: center;
-    text-transform: uppercase;
+   // text-transform: uppercase;
     width: 50%;
+    font-size: $ft-base + 8px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
     &--golden{
         border: 1px solid $golden;
     }
@@ -36,12 +44,15 @@
     }
   &:hover{
       font-size: 0px;
-      transition: ease-in-out 3s;
       color: $golden;
+      
   }
   &:hover::after{
       content: attr(data-hover);
-      font-size: $ft-base;
+      font-size: $ft-base + 8px;
+      
+      font-weight: bold;
+      
       
   }
 }

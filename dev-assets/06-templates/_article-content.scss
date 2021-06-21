@@ -20,22 +20,30 @@
     color: $golden;
     text-align: center;
     margin: 40px 0;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
+    font-style: italic;
 }
 .picture{
     border: 1px solid $golden;
-    height: 300px;
-    width: 80%;
+    
+   // width: 80%;
     &--black{
         border:1px solid $black;
+    }
+    @include device-medium{
+        height: 300px;
     }
 }
 
 .description{
     color: $white;
-    font-size: $ft-base;
+    font-size: $ft-base + 2px;
     margin-top: 10px;
     padding-top: 10px;
     text-align: justify;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
     &--black{
         color: $black;
     }
@@ -48,5 +56,9 @@
             order: 0;
         }
     }
+}
+.img-size{
+    width: 100%;
+    height: 100%;
 }
 

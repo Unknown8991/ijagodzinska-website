@@ -2,12 +2,16 @@
     align-items: center;
     background-color: $white;
     display: flex;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
     height: 100%;
     width: 100%;
     padding-top: 80px;
+    
 &__contact{
     color: $golden;
     font-size: $ft-medium;
+    font-style: italic;
     @include device-small{
         font-size: $ft-base+10px;
     }
@@ -20,11 +24,11 @@
 
 }
 &__name{
-    font-weight: bold;
+    //font-weight: bold;
     font-size: 30px;
     
     @include device-small{
-        font-size:24px ;
+        font-size:22px ;
         margin-bottom: 6px;
     }
 }
@@ -32,7 +36,7 @@
 color: $golden;
 font-size: 24px;
 @include device-small{
-    font-size:18px ;
+    font-size:17px ;
     margin-bottom: 6px;
 }
 }
@@ -48,6 +52,7 @@ font-size: 22px;
     text-align: center;
     color: $golden ;
     font-size: $ft-medium;
+    font-style: italic;
     @include device-small{
         font-size: $ft-base+10px;
     }
@@ -64,6 +69,13 @@ font-size: 22px;
     
     &__graphic{
         color: $golden;
+        transform: scale(1);
+            transition: color .3s ease-in, transform .3s ease-in;
+        &:hover{
+            color: $black;
+            transform: scale(1.07);
+            transition: color .3s ease-in, transform .3s ease-in;
+        }
         
         &--right{
             justify-content: right;

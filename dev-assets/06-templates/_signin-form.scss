@@ -2,8 +2,11 @@
     width: 100%;
     background-color: $white;
     margin-top: 100px;
-    border: 1px solid $golden;
+    //border: 1px solid $golden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 30px;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
     @include device-small{
         margin-top: 0px;
         border: none;
@@ -22,19 +25,39 @@
     color: $golden;
     background: $white;
     width: 100%;
-    border: 1px solid $golden;
+    //border: 1px solid $golden;
+    border: none;
+    outline: none;
     margin: 18px 0px;
     padding: 14px 0px 10px 3px;
     font-size: $ft-base;
+    //font-family: 'Cormorant', serif;
+    font-family: 'Bellefair', serif;
+    //font-weight: bold;
+    outline: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    transform: scale(1);
+        transition: transform .4s ease;
+    
+    &:focus{
+        transform: scale(1.08);
+        transition: transform .4s ease;
+    }
+    
+   
+    
     @include device-small{
         padding: 10px 0px 10px 3px;
         font-size: $ft-base;
         margin: 18px 0px;
-        
+
+        width: 80%;
     }
     &--center-text{
         text-align: center;
     }
+    
     
 }
 .date-pack{
@@ -52,12 +75,13 @@
     text-align: center;
     margin: 12px 0px;
     padding-bottom: 10px;
+    text-align: center;
     @include device-small{
         margin-top: 24px;
     }
     
     &__header{
-        font-weight: bold;
+       // font-weight: bold;
         @include device-medium{
             font-size: $ft-base+24px;
             margin-top: 20px;
@@ -68,7 +92,7 @@
         color: $golden;
         border-bottom: 1px solid $golden;
         margin-bottom: 20px;
-        font-weight: bold;
+        //font-weight: bold;
         font-size: $ft-base*1.3;
         margin-top: 30px;
         @include device-small{
@@ -88,17 +112,191 @@
     appearance: none;
     background-color:$white;
     color: $golden;
-    border: 2px solid $golden;
+    border: 1px solid $golden;
     width: 90%;
     display: flex;
     justify-content: space-around;
     padding: 8px ;
     font-size: $ft-base;
     margin-bottom:20px ;
+    font-family: 'Cormorant', serif;
+    outline: none;
     @include device-small{
         width: 100%;
     }
 }
 .syrius-black{
     background: $white;
+}
+.popup-unseen{
+    display: none;
+}
+.popup-visible{
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: $white;
+    width: 60%;
+    padding: 6px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @include device-small{
+        width: 80%;
+    }
+    
+}
+.popup-text{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $ft-base*1.2;
+    font-family: 'Bellefair', serif;
+    color: $golden;
+    padding-top: 6px;
+    &__summary{
+        padding-top: 2px;
+        &--font{
+            font-size: $ft-base + 10px;
+            font-style: italic;
+        }
+        &--cancel-info{
+            padding: 20px 0px;
+            font-size: $ft-base;
+        }
+    }
+    &__save{
+        padding: 12px 0px;
+    }
+    &--term-label{
+        border-bottom: 1px solid $golden;
+        
+    }
+    
+}
+.popup-text-calendar{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bellefair', serif;
+   // color: $golden;
+    &--date{
+        font-size: $ft-base+10px;
+        padding: 2px 0px;
+    }
+    &--time{
+        font-size: $ft-base+6px;
+        padding: 2px 0px;
+    }
+}
+.circle-exit{
+    display: flex;
+    justify-content: center;
+    transition: color .1s ease, transform .1s ease;
+    &:hover{
+        color: #494949;
+        transform: scale(1.2);
+        transition: color .1s ease, transform .1s ease;
+    }
+}
+.popup-code-verify-form{
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    
+}
+.popup-code-input{
+    height: 60px;
+    margin: 0px 4px;
+    border: 2px solid $golden;
+    font-size: $ft-base + 10px;
+    text-align: center;
+    font-family: 'Bellefair', serif;
+    color: $golden;
+    transition: border .3s ease, color .3s ease;
+    &:focus{
+        border: 2px solid $black;
+        color: $black;
+        transition: border .3s ease, color .3s ease;
+        
+    }
+}
+.popup-calendar-position{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 12px 0px;
+    &--unseen{
+        display: none;
+    }
+    &--visible{
+        display: flex;
+    }
+}
+.popup-calendar-days{
+    padding: 12px;
+    border: 1px solid $golden;
+    width: 100%;
+    text-align: center;
+    color: $golden;
+    transition: background-color .4s ease ;
+    
+    &:hover{
+        background-color: $golden;
+        cursor: pointer;
+        color: $white;
+        transition: background-color .4s ease ;
+    }
+    
+}
+.unseen{
+    display: none;
+}
+.more{
+    transition: transform .2s ease;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: transform .2s ease;
+    }
+}
+
+.position-right-exit{
+    display: flex;
+    justify-content: right;
+    padding: 5px;
+    font-size: $ft-base + 4px;
+}
+.blur{
+    filter: blur(3px);
+}
+.position-accept{
+    text-align: center;
+    padding-top: 10px;
+}
+.positive{
+    color: green;
+    font-size: $ft-base + 18px;
+    padding: 10px 0px;
+}
+.fa-check{
+    border: 2px solid green;
+    border-radius: 50%;
+    padding: 5px;
+}
+.fa-times{ 
+    padding: 3px;
+    
+}
+.fa-list-alt{
+    padding-left: 8px;
+}
+.fa-mobile{
+    padding-left: 8px;
+}
+.fa-arrow-down{
+    padding-right: 4px;
 }
