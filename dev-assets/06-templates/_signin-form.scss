@@ -207,6 +207,7 @@
     justify-content: center;
     padding-top: 8px;
     
+    
 }
 .popup-code-input{
     height: 60px;
@@ -221,8 +222,9 @@
         border: 2px solid $black;
         color: $black;
         transition: border .3s ease, color .3s ease;
-        
     }
+
+    
 }
 .popup-calendar-position{
     display: flex;
@@ -249,6 +251,9 @@
         cursor: pointer;
         color: $white;
         transition: background-color .4s ease ;
+    }
+    @include device-medium{
+        margin: 0px 20px;
     }
     
 }
@@ -286,17 +291,45 @@
     border: 2px solid green;
     border-radius: 50%;
     padding: 5px;
+    animation: scale 1s infinite;
 }
 .fa-times{ 
     padding: 3px;
-    
+    font-size: 25px !important;
+    &:hover{
+        animation: pivot 1s infinite;
+    }
 }
 .fa-list-alt{
     padding-left: 8px;
 }
 .fa-mobile{
-    padding-left: 8px;
+    padding-left: 10px;
+    animation: calling 2s infinite;
+    font-size: 40px !important;
 }
 .fa-arrow-down{
     padding-right: 4px;
+}
+@keyframes calling {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    80% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes pivot {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+    
+}
+@keyframes scale{
+    0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% {transform: scale(1);}
 }

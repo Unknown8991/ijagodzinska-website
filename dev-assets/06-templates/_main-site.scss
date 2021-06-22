@@ -42,8 +42,63 @@ html {
     font-family: 'Bellefair', serif;
     font-weight: 400;
     font-style: italic;
+
+    
+
     @include device-small{
       margin-bottom: 24px;
+      padding-left: 0px;
+    }
+    &--animation-first{
+      background: linear-gradient(to right, $golden 20%, #5b584f 40%  );
+      background-size: 200% auto;
+      //color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      animation: shine 2s linear;
+      animation-iteration-count:1;
+    }
+    &--animation-second{
+      background: linear-gradient(to right, $golden 20%, #5b584f 40%  );
+      background-size: 200% auto;
+      //color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      animation: shine 2s linear;
+      animation-iteration-count:1;
+      animation-delay: .5s;
+    }
+    &--animation-third{
+      background: linear-gradient(to right, $golden 20%, #5b584f 40%  );
+      background-size: 200% auto;
+      //color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      animation: shine 2s linear;
+      animation-iteration-count:1;
+      animation-delay: .8s;
+    }
+    &--animation-fourth{
+      background: linear-gradient(to right, $golden 20%, #5b584f 40%  );
+      background-size: 200% auto;
+      //color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      animation: shine 2s linear;
+      animation-iteration-count:1;
+      animation-delay: 1.2s;
     }
   }
   &__relay{
@@ -66,19 +121,19 @@ html {
   }
   @include device-medium{
     &--font64{
-      font-size: $ft-base*4;
+      font-size: $ft-base * 4;
     } 
     &--font46{
-      font-size: ($ft-base+7px)*2;
+      font-size: ($ft-base+7px) * 2;
     }
     &--font48{
-      font-size: $ft-base*3;
+      font-size: $ft-base * 3;
     }
     &--font50{
-      font-size: ($ft-base+9px)*2;
+      font-size: ($ft-base+9px) * 2;
     }
     &--font60{
-      font-size: ($ft-base+14px)*2;
+      font-size: ($ft-base+14px) * 2;
     }
   }
 
@@ -86,20 +141,24 @@ html {
   @include device-small{
     
     &--font20{
-      font-size: $ft-base+3px;
+      font-size: $ft-base + 3px;
     }
     &--font22{
-      font-size: $ft-base+5px;
+      font-size: $ft-base + 5px;
     }
     &--font24{
-      font-size: $ft-base+7px;
+      font-size: $ft-base + 7px;
     }
     &--font26{
-      font-size: $ft-base+8px;
+      font-size: $ft-base + 8px;
     } 
     &--font19{
-      font-size: $ft-base+3px;
-    }     
+      font-size: $ft-base + 3px;
+    } 
+  
+    &--font18{
+      font-size: $ft-base + 2px;
+    }
   }
   
 }
@@ -142,5 +201,10 @@ html {
   width: 10%;
   @include device-small{
     width: 100px; 
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
