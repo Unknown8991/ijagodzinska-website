@@ -1093,7 +1093,8 @@ html {
   text-align: center;
   margin: 12px 0px;
   padding-bottom: 10px;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Bellefair', serif; }
   @media (max-width: 768px) {
     .information-text-form {
       margin-top: 24px; } }
@@ -1157,6 +1158,15 @@ html {
     .popup-visible {
       width: 80%; } }
 
+@media (min-width: 768px) {
+  .popup-position-input {
+    display: flex;
+    flex-direction: row; } }
+
+@media (min-width: 768px) {
+  .popup-position-input--select {
+    justify-content: center; } }
+
 .popup-text {
   text-align: center;
   display: flex;
@@ -1178,6 +1188,13 @@ html {
     padding: 12px 0px; }
   .popup-text--term-label {
     border-bottom: 1px solid #A77956; }
+  .popup-text--new-term {
+    font-family: 'Open Sans Condensed', sans-serif;
+    transition: transform .3s ease-in-out; }
+    .popup-text--new-term:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: transform .2s ease-in-out; }
 
 .popup-text-calendar {
   text-align: center;

@@ -16,6 +16,10 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -41,14 +45,8 @@
             </header>
         </div>
     </div>
-    <!--Floating button-->
-    <!-- <a href="index.html">
-        <button class="floating-btn floating-btn__up--background-reverse">
-            <i class="fa fa-home" aria-hidden="true"></i>
-        </button>
-    </a> -->
+    <!-- formularz-->
     <div class="o-container syrius-black">
-
         <div class="form">
             <div class="o-row main-form-signin">
                 <div class="o-col--md12 o-col--sm12 o-content-flex information-text-form">
@@ -120,7 +118,7 @@
         </div>
         <div class="popup-text">Potwierdź swoją rejestrację za pomocą kodu SMS wysłanego pod numer:<br> 789 963 321
         </div>
-
+        <!-- 5 cyfrowy token weryfikujący-->
         <div class="popup-code-verify-form">
             <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
             <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
@@ -128,26 +126,77 @@
             <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
             <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
         </div>
+        <!-- Zapisz wprowadzony kod -->
         <div class="popup-text popup-text__save">
             <button id="popup-sms-destroy"
                 class="c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
                 onclick="runPopup2(), destroyPopupSMS()">Zapisz</button>
         </div>
+        <!--  -->
         <div class="popup-text popup-text__save">
             <button id="popup-sms-destroy"
                 class="c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
                 onclick="runPopupCalendar()">Inne
                 terminy </button>
         </div>
+        <!--Inny termin-->
+        <div id="popup-change" class="popup-text popup-text--new-term" onclick="changeTerm()">Wybierz ręcznie nowy
+            termin &#128197;
+        </div>
     </div>
+    <!-- Popup manual change term -->
+    <div id="popup-change-term" class="popup-unseen">
+        <div class="position-right-exit">
+            <div class="circle-exit">
+                <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
+            </div>
+        </div>
+        <div class="information-text-form information-text-form__header">Edytuj rezerwację</div>
+        <div class="o-col--md12 o-col--sm12 popup-position-input popup-position-input--select">
+            <select class="dropdown-select" name="treatments" id="treatments-select">
+                <option value="">Wybierz opcję:</option>
+                <optgroup label="Paznokcie">
+                    <option value="Hybryda">Hybryda</option>
+                <optgroup label="Medycyna estetyczna">
+                    <option value="Masaż">Masaż</option>
+                    <option value="poprawka">Poprawka</option>
+                    <option value="kwas">Kwas hialuronowy</option>
+                    <option value="kwas">Kwas medyczny</option>
+                    <option value="oxybrazja">Oxybrazja</option>
+            </select>
+        </div>
+        <div class="popup-position-input">
+            <div class="o-col--md6 o-col--sm12 o-content-flex">
+                <input class="input-form" type="text" placeholder="Imię">
+            </div>
+            <div class="o-col--md6 o-col--sm12 o-content-flex">
+                <input class="input-form" type="text" placeholder="Nazwisko">
+            </div>
+        </div>
+        <div class="popup-position-input">
+            <div class="o-col--md6 o-col--sm12 o-content-flex">
+                <input class="input-form" type="text" placeholder="Nr telefonu">
+            </div>
+        </div>
+
+        <div class="popup-position-input">
+            <div class="o-col--md6 o-col--sm12 o-content-flex">
+                <input class="input-form" type="date" value="10.10.2010">
+            </div>
+            <div class="o-col--md6 o-col--sm12 o-content-flex">
+                <input class="input-form" type="time" value="10:00">
+            </div>
+        </div>
+        <div class="popup-text popup-text__save">
+            <button id="popup-sms-destroy"
+                class="o-col--md12 c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
+                onclick="runPopup2(), destroyPopupSMS()">Zapisz</button>
+        </div>
     </div>
 
     <!--Popup done registration-->
     <div id="popup-confirm" class="popup-unseen">
         <div class="position-right-exit">
-            <!-- <div class="circle-exit">
-                <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
-            </div> -->
         </div>
         <div class="popup-text">
             Dziękuję za potwierdzenie!
@@ -170,10 +219,8 @@
             </div>
         </div>
         <div class="popup-text popup-text__summary--font">Podsumowanie
-
             <i class="fa fa-list-alt" aria-hidden="true"></i>
         </div>
-
         <div class="popup-text">Kwas medyczny</div>
         <div class="popup-text">Janina Kowalska</div>
         <div class="popup-text">502 456 852</div>
@@ -192,6 +239,20 @@
             Ups...
         </div>
         <div class="popup-text">Wskazany termin jest już zajęty &#x1F62A;</div>
+        <!-- <div id="popup-change" class="popup-text popup-text--new-term" onclick="changeTerm()">Wybierz ręcznie nowy
+            termin &#128197;
+        </div> -->
+        <!--
+            Dodać popup z ponownym wyborem terminu wizyty             
+        -->
+        <!-- <div id="popup-change-term" class="popup-unseen">
+            <div class="position-right-exit">
+                <div class="circle-exit">
+                    <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
+                </div>
+            </div>
+
+        </div> -->
         <div class="popup-text">
             Przedstawiam najbliższe wolne terminy:
         </div>
@@ -225,7 +286,7 @@
             </div>
         </div>
 
-        <!--Unseen block -> loadMoreTerm()-->
+        <!--Unseen block calendar -> loadMoreTerm()-->
         <div class="popup-text popup-text--term-label">Najbliższe 14 dni</div>
         <div id="more-term" class="o-col-sm12 popup-calendar-position popup-calendar-position--unseen">
 
@@ -263,10 +324,11 @@
         </div>
         <div class="popup-text popup-text__save">
             <button id="popup-sms-destroy"
-                class="c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
+                class="o-col--md12 c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
                 onclick="runPopup2(), destroyPopupSMS()">Zapisz</button>
         </div>
     </div>
+
 
     <script>
         function runPopup() {
@@ -314,6 +376,15 @@
             popupSms.classList.remove('popup-visible')
         }
 
+        function changeTerm() {
+
+            const popupOtherTerm = document.getElementById('popup-change-term');
+            popupOtherTerm.classList.add('popup-visible');
+            console.log(popupOtherTerm)
+            const popupSms = document.getElementById('popup-sms')
+            popupSms.classList.remove('popup-visible')
+        }
+
         function loadMoreTerm() {
             const moreTerm = document.getElementById('more-term')
             const arrowMore = document.getElementById('moreArrow')
@@ -334,6 +405,9 @@
             //calendar
             const popupCalendar = document.getElementById('popup-calendar')
             popupCalendar.classList.remove('popup-visible')
+            // change term
+            const popupChangeTerm = document.getElementById('popup-change-term')
+            popupChangeTerm.classList.remove('popup-visible')
 
             const blurBody = document.querySelector(".syrius-black")
 

@@ -76,6 +76,7 @@
     margin: 12px 0px;
     padding-bottom: 10px;
     text-align: center;
+    font-family: 'Bellefair', serif;
     @include device-small{
         margin-top: 24px;
     }
@@ -124,6 +125,7 @@
     @include device-small{
         width: 100%;
     }
+    
 }
 .syrius-black{
     background: $white;
@@ -146,6 +148,17 @@
         width: 80%;
     }
     
+}
+.popup-position-input{
+    @include device-medium{
+        display: flex;
+        flex-direction: row;
+    }
+    &--select{
+        @include device-medium{
+            justify-content: center;
+        }
+    }
 }
 .popup-text{
     text-align: center;
@@ -173,6 +186,15 @@
     &--term-label{
         border-bottom: 1px solid $golden;
         
+    }
+    &--new-term{
+        font-family: 'Open Sans Condensed', sans-serif;
+        transition: transform .3s ease-in-out;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: transform .2s ease-in-out;
+        }
     }
     
 }
