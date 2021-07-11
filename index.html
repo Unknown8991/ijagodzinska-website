@@ -1,311 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="prod-assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="prod-assets/style.css" />
     <!--Libery AOS animation-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!--Script AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--Font Awesome libery-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="./scripts/registerService.js"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Picture 100vh-->
     <div class="madame">
-        <!--Menu-->
-        <div class="o-container ">
-            <div class="o-row">
-                <header class="header">
-                    <ul class="o-col--sm12 header-row">
-                        <li class="list">
-                            <a class="list__relay" href="about-me.html">o mnie</a>
-                        </li>
-                        <li class="list">
-                            <a class="list__relay" href="gallery.html">galeria</a>
-                        </li>
-                        <li class="list">
-                            <a class="list__relay" href="offer.html">oferta</a>
-                        </li>
-                        <li class="list">
-                            <a class="list__relay" href="#contact">kontakt</a>
-                        </li>
-                    </ul>
-                </header>
-            </div>
+      <!--Menu-->
+      <div class="o-container">
+        <div class="o-row">
+          <header class="header">
+            <ul class="o-col--sm12 header-row">
+              <li class="list">
+                <a class="list__relay" href="about-me.html">o mnie</a>
+              </li>
+              <li class="list">
+                <a class="list__relay" href="gallery.html">galeria</a>
+              </li>
+              <li class="list">
+                <a class="list__relay" href="offer.html">oferta</a>
+              </li>
+              <li class="list">
+                <a class="list__relay" href="#contact">kontakt</a>
+              </li>
+            </ul>
+          </header>
         </div>
-        <!--Floating buttons-->
-        <a href="#">
-            <button class="floating-btn__up floating-btn__up--home">
-                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      </div>
+      <!--Floating buttons-->
+      <a href="#">
+        <button class="floating-btn__up floating-btn__up--home">
+          <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </button>
+      </a>
 
-            </button>
-        </a>
+      <!--Labels-->
+      <div class="o-container">
+        <div class="o-row label-position">
+          <ul class="o-col-sm12 label-content">
+            <li
+              class="
+                list
+                list__label
+                list__label--animation-first
+                list--font19
+                list--font46
+                o-col--sm6 o-col--md6 o-col--lg6
+              "
+            >
+              Henna rzęs
+            </li>
 
+            <li
+              class="
+                list list__label list__label--animation-second
+                o-col--sm6
+                list--font19 list--font50
+                o-col--md6 o-col--lg6
+              "
+            >
+              Kwasy medyczne
+            </li>
+            <li
+              class="
+                list
+                list__label
+                list__label--animation-third
+                list--font19
+                list--font60
+                o-col--sm6 o-col--md6 o-col--lg6
+              "
+            >
+              Wypełnianie ust
+            </li>
+            <li
+              class="
+                list
+                list__label
+                list__label--animation-fourth
+                list--font18
+                list--font64
+                o-col--sm6 o-col--md6 o-col--lg6
+              "
+            >
+              Manicure klasyczny
+            </li>
+          </ul>
+          <!--Button-->
+          <div
+            class="o-col--sm12 o-col--md12 o-content-flex o-content-margin--180"
+          >
+            <a class="o-content-flex decoration-none" href="signin.html">
+              <button class="c-main-button">Zapisz się na wizytę</button>
+            </a>
+          </div>
 
-        <!--Labels-->
+          <div
+            class="
+              o-col--sm12 o-col--md12
+              o-content-flex
+              position-end
+              o-content-margin--20tp
+            "
+          >
+            <img class="logo" src="/images/text839.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!--Content article-->
+      <div class="article-content article-content--size">
         <div class="o-container">
-            <div class="o-row label-position">
-                <ul class="o-col-sm12 label-content">
-
-                    <li
-                        class="list list__label list__label--animation-first list--font19 list--font46 o-col--sm6 o-col--md6 o-col--lg6">
-                        Henna rzęs
-                    </li>
-
-                    <li class="list list__label list__label--animation-second o-col--sm6
-                    list--font19 list--font50 o-col--md6 o-col--lg6">Kwasy medyczne</li>
-                    <li
-                        class="list list__label list__label--animation-third  list--font19 list--font60 o-col--sm6 o-col--md6 o-col--lg6">
-                        Wypełnianie
-                        ust
-                    </li>
-                    <li
-                        class="list list__label list__label--animation-fourth list--font18 list--font64 o-col--sm6 o-col--md6 o-col--lg6 ">
-                        Manicure
-                        klasyczny
-                    </li>
-                </ul>
-                <!--Button-->
-                <div class="o-col--sm12 o-col--md12 o-content-flex o-content-margin--180">
-                    <a class="o-content-flex decoration-none" href="signin.html">
-                        <button class="c-main-button">Zapisz się na wizytę</button>
-                    </a>
-
+          <div class="o-row">
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex
+                o-content-margin--all-mar60
+                orders
+              "
+            >
+              <div class="picture">
+                <img
+                  class="img-size"
+                  src="/images/img-main-site/derma.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex o-content-flex--items
+                o-content-margin--20
+              "
+            >
+              <div class="article">
+                <div class="heading">
+                  Zabieg mezoterapii mikroigłowej urządzeniem dermapen
                 </div>
-
-                <div class="o-col--sm12 o-col--md12 o-content-flex position-end o-content-margin--20tp">
-                    <img class="logo" src="/images/text839.png" alt="">
+                <div data-aos="fade-right" class="description">
+                  Jest to urządzenie medyczne pozwalające wykonywać zabiegi na
+                  obszarach tego wymagających. Poprzez innowacyjny system
+                  nakłuwania możemy osiągać spektakularne efekty jeśli chodzi o
+                  terapię blizn, przeciwstarzeniową oraz redukującą rostępy.
+                  Zabieg jest bezbolesny, skóra po zabiegu jest zaczerwieniona
+                  co może się utrzymać do 2 dni.
                 </div>
+              </div>
             </div>
-
+          </div>
         </div>
-        <!--Content article-->
-        <div class="article-content article-content--size">
-            <div class="o-container">
-                <div class="o-row">
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-margin--all-mar60 orders">
-                        <div class="picture ">
-                            <img class="img-size" src="/images/img-main-site/derma.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-flex--items o-content-margin--20">
-                        <div class="article">
-                            <div class="heading">Zabieg mezoterapii mikroigłowej urządzeniem dermapen</div>
-                            <div data-aos="fade-right" class="description">
-                                Jest to urządzenie medyczne pozwalające wykonywać zabiegi na obszarach tego
-                                wymagających. Poprzez innowacyjny system nakłuwania możemy osiągać spektakularne efekty
-                                jeśli chodzi o terapię blizn, przeciwstarzeniową oraz redukującą rostępy. Zabieg jest
-                                bezbolesny, skóra po zabiegu jest zaczerwieniona co może się utrzymać do 2 dni.
-
-                            </div>
-                        </div>
-                    </div>
-
+      </div>
+      <div class="article-content article-content--white">
+        <div class="o-container">
+          <div class="o-row">
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex o-content-margin
+                orders orders--first-picture
+              "
+            >
+              <div class="picture picture--black">
+                <img
+                  class="img-size"
+                  src="/images/img-main-site/mezo.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex o-content-flex--items
+                o-content-margin--20
+              "
+            >
+              <div class="article">
+                <div class="heading">Mezoterapia igłowa</div>
+                <div
+                  data-aos="fade-right"
+                  class="description description--black"
+                >
+                  Skuteczny zabieg likwidujący pierwsze oznaki starzenia,
+                  wiotkości i utraty owalu. W okolice która jest poddawana
+                  zabiegowi wstrzykujemy niewielką ilość preparatu dobranego w
+                  zależności od potrzeb danej skóry. skóra już po jednym zabiegu
+                  jest jędrniejsza, poprawia się owal twarzy, jest bardziej
+                  promienna i gładka. Okolica jest znieczulana specjalnym kremem
+                  dzięki temu zabieg jest bezbolesny.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="article-content article-content--white">
-            <div class="o-container">
-                <div class="o-row">
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-margin orders orders--first-picture">
-                        <div class="picture picture--black ">
-                            <img class="img-size" src="/images/img-main-site/mezo.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-flex--items o-content-margin--20">
-                        <div class="article">
-                            <div class="heading">Mezoterapia igłowa</div>
-                            <div data-aos="fade-right" class="description description--black">
-                                Skuteczny zabieg likwidujący pierwsze oznaki starzenia, wiotkości i utraty owalu. W
-                                okolice która jest poddawana zabiegowi wstrzykujemy niewielką ilość preparatu dobranego
-                                w zależności od potrzeb danej skóry. skóra już po jednym zabiegu jest jędrniejsza,
-                                poprawia się owal twarzy, jest bardziej promienna i gładka. Okolica jest znieczulana
-                                specjalnym kremem dzięki temu zabieg jest bezbolesny.
-
-                            </div>
-                        </div>
-                    </div>
+      </div>
+      <div class="article-content">
+        <div class="o-container">
+          <div class="o-row">
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex
+                o-content-margin--all-mar60
+                orders
+              "
+            >
+              <div class="picture">
+                <img
+                  class="img-size"
+                  src="/images/img-main-site/kwas.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex o-content-flex--items
+                o-content-margin--20
+              "
+            >
+              <div class="article">
+                <div class="heading">Zabiegi z kwasami</div>
+                <div data-aos="fade-right" class="description">
+                  Kwasy kosmetyczne wspomagają naturalny proces złuszczania
+                  naskórka, oczyszczają skórę, redukują przebarwinia, działają
+                  antybakteryjnie. Zabiegi są dobierane indywidualnie do potrzeb
+                  klienta.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="article-content">
-            <div class="o-container">
-                <div class="o-row">
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-margin--all-mar60 orders">
-                        <div class="picture">
-                            <img class="img-size" src="/images/img-main-site/kwas.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-flex--items o-content-margin--20">
-                        <div class="article">
-                            <div class="heading">Zabiegi z kwasami</div>
-                            <div data-aos="fade-right" class="description">
-                                Kwasy kosmetyczne wspomagają naturalny proces złuszczania naskórka, oczyszczają skórę,
-                                redukują przebarwinia, działają antybakteryjnie. Zabiegi są dobierane indywidualnie do
-                                potrzeb klienta.
-                            </div>
-                        </div>
-                    </div>
+      </div>
+
+      <div class="article-content article-content--white">
+        <div class="o-container">
+          <div class="o-row">
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex
+                o-content-margin--all-mar60
+                orders orders--first-picture
+              "
+            >
+              <div class="picture picture--black">
+                <img
+                  class="img-size"
+                  src="/images/img-main-site/mouth.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex o-content-flex--items
+                o-content-margin--20
+              "
+            >
+              <div class="article">
+                <div class="heading">Wypełnianie ust kwasem hialuronowym</div>
+                <div
+                  data-aos="fade-right"
+                  class="description description--black"
+                >
+                  Modelowanie ust to zabieg dla osób które marzą o pięknych
+                  wydatnych, nawilżonych ustach. jeśli występuje jakaś asymetria
+                  można ją z powodzeniem skorygować.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="article-content article-content--white">
-            <div class="o-container">
-                <div class="o-row">
-                    <div
-                        class="o-col--md6 o-col--sm12 o-content-flex o-content-margin--all-mar60 orders orders--first-picture">
-                        <div class="picture picture--black">
-                            <img class="img-size" src="/images/img-main-site/mouth.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-flex--items o-content-margin--20">
-                        <div class="article">
-                            <div class="heading">Wypełnianie ust kwasem hialuronowym</div>
-                            <div data-aos="fade-right" class="description description--black">
-                                Modelowanie ust to zabieg dla osób które marzą o pięknych wydatnych, nawilżonych ustach.
-                                jeśli występuje jakaś asymetria można ją z powodzeniem skorygować.
-
-                            </div>
-                        </div>
-                    </div>
+      <div class="article-content">
+        <div class="o-container">
+          <div class="o-row">
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex
+                o-content-margin--all-mar60
+                orders
+              "
+            >
+              <div class="picture">
+                <img
+                  class="img-size"
+                  src="/images/img-main-site/henna2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex o-content-flex--items
+                o-content-margin--20
+              "
+            >
+              <div class="article">
+                <div class="heading">Henna pudrowa</div>
+                <div data-aos="fade-right" class="description">
+                  To innowacyjny zabieg pozwalający na dłużej cieszyć się
+                  pięknymi brwiami. Naturalny skład nie uczula, farbuje skórę
+                  oraz włoski oraz je pielęgnuje. Utrzymuje się znacznie dłużej
+                  na skórze niż zwykła henna. Zabieg poprzedzony jest dokładnym
+                  rysunkiem który pozwoli nam dobrać najkorzystniejszy kształt
+                  oraz spełnić marzenia o pięknych gęstych brwiach.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="article-content">
-            <div class="o-container">
-                <div class="o-row">
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-margin--all-mar60 orders">
-                        <div class="picture">
-                            <img class="img-size" src="/images/img-main-site/henna2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-flex--items o-content-margin--20">
-                        <div class="article">
-                            <div class="heading">Henna pudrowa</div>
-                            <div data-aos="fade-right" class="description">
-                                To innowacyjny zabieg pozwalający na dłużej cieszyć się pięknymi brwiami. Naturalny
-                                skład nie uczula, farbuje skórę oraz włoski oraz je pielęgnuje. Utrzymuje się znacznie
-                                dłużej na skórze niż zwykła henna. Zabieg poprzedzony jest dokładnym rysunkiem który
-                                pozwoli nam dobrać najkorzystniejszy kształt oraz spełnić marzenia o pięknych gęstych
-                                brwiach.
-
-                            </div>
-                        </div>
-                    </div>
+      <div class="article-content article-content--white">
+        <div class="o-container">
+          <div class="o-row">
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex
+                o-content-margin--all-mar60
+                orders orders--first-picture
+              "
+            >
+              <div class="picture picture--black">
+                <img
+                  class="img-size"
+                  src="/images/img-main-site/brwi.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="
+                o-col--md6 o-col--sm12
+                o-content-flex o-content-flex--items
+                o-content-margin--20
+              "
+            >
+              <div class="article">
+                <div class="heading">Laminacja brwi i rzęs</div>
+                <div
+                  data-aos="fade-right"
+                  class="description description--black"
+                >
+                  Nie lubisz swoich rzęs? Są krótkie i proste? Mamy na to
+                  sposób. Laminacja pozwala nam na uzyskanie grubszych pięknie
+                  podkręconych rzęs, bez efektu sztuczności oraz przerysowania.
+                  Zabieg utrzymuje się około miesiąca, jest bezpieczny dla
+                  naszych delikatnych rzęs oraz okolicy oka.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div class="article-content article-content--white">
-            <div class="o-container">
-                <div class="o-row">
-                    <div
-                        class="o-col--md6 o-col--sm12 o-content-flex o-content-margin--all-mar60 orders orders--first-picture">
-                        <div class="picture picture--black">
-                            <img class="img-size" src="/images/img-main-site/brwi.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="o-col--md6 o-col--sm12 o-content-flex o-content-flex--items o-content-margin--20">
-                        <div class="article">
-                            <div class="heading">Laminacja brwi i rzęs</div>
-                            <div data-aos="fade-right" class="description description--black">
-                                Nie lubisz swoich rzęs? Są krótkie i proste? Mamy na to sposób. Laminacja pozwala nam na
-                                uzyskanie grubszych pięknie podkręconych rzęs, bez efektu sztuczności oraz
-                                przerysowania. Zabieg utrzymuje się około miesiąca, jest bezpieczny dla naszych
-                                delikatnych rzęs oraz okolicy oka.
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <!--Add blocks with treatments-->
+      <div class="blocks-add-content">
+        <div class="o-container">
+          <div class="o-row">
+            <div
+              class="
+                o-col--md12 o-col--sm12
+                o-content-flex
+                blocks-add-content__label
+              "
+            >
+              Popularne zabiegi
             </div>
-        </div>
-        <!--Add blocks with treatments-->
-        <div class="blocks-add-content ">
-            <div class="o-container">
-                <div class="o-row">
-                    <div class="o-col--md12 o-col--sm12 o-content-flex blocks-add-content__label">Popularne zabiegi
-                    </div>
-                    <div class=" o-col--md4 o-col--sm12 o-content-flex  o-content-margin o-content-margin--40">
-                        <div data-aos="flip-up" class="block block--golden" data-hover="120 zł">Pedicure z hybrydą
-                        </div>
-                    </div>
-                    <div class=" o-col--md4 o-col--sm12 o-content-flex o-content-margin o-content-margin--40">
-                        <div data-aos="flip-up" class="block o-content-flex" data-hover="99-199 zł">Kwasy medyczne
-                        </div>
-                    </div>
-                    <div class=" o-col--md4 o-col--sm12 o-content-flex o-content-margin o-content-margin--40">
-                        <div data-aos="flip-up" class="block block--golden" data-hover="30 zł">Henna brwi</div>
-                    </div>
-                    <div class=" o-col--md4 o-col--sm12 o-content-flex o-content-margin o-content-margin--40">
-                        <div data-aos="flip-up" class="block " data-hover="80 zł">Lifting brwi z henną</div>
-                    </div>
-                    <div class=" o-col--md4 o-col--sm12 o-content-flex o-content-margin o-content-margin--40">
-                        <div data-aos="flip-up" class="block block--golden" data-hover="600 zł">Wypełnianie ust
-                        </div>
-                    </div>
-                    <div class=" o-col--md4 o-col--sm12 o-content-flex o-content-margin o-content-margin--40">
-                        <div data-aos="flip-up" class="block" data-hover="100zł">Przedłużanie na formie</div>
-                    </div>
-                </div>
+            <div
+              class="
+                o-col--md4 o-col--sm12
+                o-content-flex o-content-margin o-content-margin--40
+              "
+            >
+              <div
+                data-aos="flip-up"
+                class="block block--golden"
+                data-hover="120 zł"
+              >
+                Pedicure z hybrydą
+              </div>
             </div>
-        </div>
-        <!--Contacts data-->
-        <div id="contact" class="footer">
-            <div class="footer__divider o-col--md5"></div>
-            <div class="footer__contact o-col--md2 o-content-flex ">Kontakt</div>
-            <div class="footer__divider o-col--md5"></div>
-        </div>
-        <div class="footer o-col--md12 ">
-            <div class="o-container">
-                <div class="o-row footer--column o-content-flex o-content-flex--items">
-                    <div class="footer__name o-content-margin--30">Izabela Jagodzińska Kosmetolog</div>
-                    <div class="footer__specialist o-content-margin--30">mgr Promocji Zdrowia i Odnowy Biologicznej
-                    </div>
-                    <div class="footer__phone">Tel.: +48 32 219 32 20</div>
-                </div>
+            <div
+              class="
+                o-col--md4 o-col--sm12
+                o-content-flex o-content-margin o-content-margin--40
+              "
+            >
+              <div
+                data-aos="flip-up"
+                class="block o-content-flex"
+                data-hover="99-199 zł"
+              >
+                Kwasy medyczne
+              </div>
             </div>
-        </div>
-        <!--Social media-->
-        <div class="footer ">
-            <div class="footer__divider o-col--md5"></div>
-            <div class="footer__social-media o-col--md2 o-content-flex ">Media Społecznościowe</div>
-            <div class="footer__divider o-col--md5"></div>
-
-        </div>
-        <!--Icon social media-->
-        <div class="footer">
-            <div class="o-col--md6 o-col--sm6 icon-social-media icon-social-media__graphic--right">
-                <i class="fa fa-facebook icon-social-media__graphic" aria-hidden="true"></i>
+            <div
+              class="
+                o-col--md4 o-col--sm12
+                o-content-flex o-content-margin o-content-margin--40
+              "
+            >
+              <div
+                data-aos="flip-up"
+                class="block block--golden"
+                data-hover="30 zł"
+              >
+                Henna brwi
+              </div>
             </div>
-            <div class="o-col--md6 o-col--sm6 icon-social-media icon-social-media__graphic--left">
-                <i class="fa fa-instagram  icon-social-media__graphic " aria-hidden="true"></i>
+            <div
+              class="
+                o-col--md4 o-col--sm12
+                o-content-flex o-content-margin o-content-margin--40
+              "
+            >
+              <div data-aos="flip-up" class="block" data-hover="80 zł">
+                Lifting brwi z henną
+              </div>
             </div>
-
+            <div
+              class="
+                o-col--md4 o-col--sm12
+                o-content-flex o-content-margin o-content-margin--40
+              "
+            >
+              <div
+                data-aos="flip-up"
+                class="block block--golden"
+                data-hover="600 zł"
+              >
+                Wypełnianie ust
+              </div>
+            </div>
+            <div
+              class="
+                o-col--md4 o-col--sm12
+                o-content-flex o-content-margin o-content-margin--40
+              "
+            >
+              <div data-aos="flip-up" class="block" data-hover="100zł">
+                Przedłużanie na formie
+              </div>
+            </div>
+          </div>
         </div>
-        <!--Initialize AOS-->
-        <!--
+      </div>
+      <!--Contacts data-->
+      <div id="contact" class="footer">
+        <div class="footer__divider o-col--md5"></div>
+        <div class="footer__contact o-col--md2 o-content-flex">Kontakt</div>
+        <div class="footer__divider o-col--md5"></div>
+      </div>
+      <div class="footer o-col--md12">
+        <div class="o-container">
+          <div
+            class="o-row footer--column o-content-flex o-content-flex--items"
+          >
+            <div class="footer__name o-content-margin--30">
+              Izabela Jagodzińska Kosmetolog
+            </div>
+            <div class="footer__specialist o-content-margin--30">
+              mgr Promocji Zdrowia i Odnowy Biologicznej
+            </div>
+            <div class="footer__phone">Tel.: +48 32 219 32 20</div>
+          </div>
+        </div>
+      </div>
+      <!--Social media-->
+      <div class="footer">
+        <div class="footer__divider o-col--md5"></div>
+        <div class="footer__social-media o-col--md2 o-content-flex">
+          Media Społecznościowe
+        </div>
+        <div class="footer__divider o-col--md5"></div>
+      </div>
+      <!--Icon social media-->
+      <div class="footer">
+        <div
+          class="
+            o-col--md6 o-col--sm6
+            icon-social-media icon-social-media__graphic--right
+          "
+        >
+          <i
+            class="fa fa-facebook icon-social-media__graphic"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <div
+          class="
+            o-col--md6 o-col--sm6
+            icon-social-media icon-social-media__graphic--left
+          "
+        >
+          <i
+            class="fa fa-instagram icon-social-media__graphic"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+      <!--Initialize AOS-->
+      <!--
        
    -->
-        <script>
-            AOS.init();
-        </script>
+      <script>
+        AOS.init();
+      </script>
     </div>
-</body>
-
+  </body>
 </html>

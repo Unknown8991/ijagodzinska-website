@@ -1,251 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="prod-assets/style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="prod-assets/style.css" />
 
     <!--Font Awesome libery-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
     <title>Document</title>
-</head>
+  </head>
 
-<body style="background: white; height: 100vh;">
+  <body style="background: white; height: 100vh">
     <!--Menu-->
-    <div class="o-container ">
-        <div class="o-row">
-            <header class="header">
-                <ul class="o-col--sm12 header-row">
-                    <li class="list">
-                        <a class="list__relay list__relay--revers" href="">o mnie</a>
-                    </li>
-                    <li class="list">
-                        <a class="list__relay list__relay--revers" href="">galeria</a>
-                    </li>
-                    <li class="list">
-                        <a class="list__relay list__relay--revers" href="">oferta</a>
-                    </li>
-                    <li class="list">
-                        <a class="list__relay list__relay--revers" href="#contact">kontakt</a>
-                    </li>
-                </ul>
-            </header>
-        </div>
+    <div class="o-container">
+      <div class="o-row">
+        <header class="header">
+          <ul class="o-col--sm12 header-row">
+            <li class="list">
+              <a class="list__relay list__relay--revers" href="">o mnie</a>
+            </li>
+            <li class="list">
+              <a class="list__relay list__relay--revers" href="">galeria</a>
+            </li>
+            <li class="list">
+              <a class="list__relay list__relay--revers" href="">oferta</a>
+            </li>
+            <li class="list">
+              <a class="list__relay list__relay--revers" href="#contact"
+                >kontakt</a
+              >
+            </li>
+          </ul>
+        </header>
+      </div>
     </div>
     <!-- formularz-->
-    <div class="o-container syrius-black">
-        <div class="form">
-            <div class="o-row main-form-signin">
-                <div class="o-col--md12 o-col--sm12 o-content-flex information-text-form">
-                    <div class="information-text-form information-text-form__header">Zapisz się na wizytę już teraz!
-                    </div>
-                    <div class="information-text-form  information-text-form__description">Wypełnij poniższy formularz.
-                        Po wprowadzeniu danych kliknij przycisk Zapisz.</div>
-                </div>
-                <div class="o-col--md12 o-col--sm12">
-
-                    <div class="o-col--md4 o-col--sm8 information-text-form--bold-labels">Dostępne
-                        zabiegi:</div>
-                </div>
-
-                <div class="o-col--md12 o-col--sm12 o-content-flex-md">
-                    <select class="dropdown-select" name="treatments" id="treatments-select">
-                        <option value="">Wybierz opcję:</option>
-                        <optgroup label="Paznokcie">
-                            <option value="Hybryda">Hybryda</option>
-                        <optgroup label="Medycyna estetyczna">
-                            <option value="Masaż">Masaż</option>
-                            <option value="poprawka">Poprawka</option>
-                            <option value="kwas">Kwas hialuronowy</option>
-                            <option value="kwas">Kwas medyczny</option>
-                            <option value="oxybrazja">Oxybrazja</option>
-                    </select>
-                </div>
-                <div class="o-col--md12 o-col--sm12 o-content-flex o-text-center">
-
-                    <div class="o-col--md4 o-col--sm9 information-text-form--bold-labels">Dane kontaktowe:</div>
-                </div>
-                <div class="o-col--md4 o-col--sm12 o-content-flex">
-                    <input class="input-form" type="text" placeholder="Imię">
-                </div>
-                <div class="o-col--md6 o-col--sm12 o-content-flex">
-                    <input class="input-form" type="text" placeholder="Nazwisko">
-                </div>
-                <div class="o-col--md4 o-col--sm12 o-content-flex--small2">
-                    <input class="input-form" type="text" placeholder="Nr telefonu" maxlength="9">
-                </div>
-                <div class="o-col--md6 o-col--sm12 date-pack ">
-                    <div class="o-col--md6 o-col--sm7 o-content-revert-margin">
-                        <input class="input-form input-form--center-text" type="date">
-                    </div>
-                    <div class="o-col--md6 o-col--sm5 o-content-revert-margin">
-                        <input class="input-form input-form--center-text" type="time">
-                    </div>
-                </div>
-
-
+    <div class="o-container syrius-black" id="app">
+      <div class="form">
+        <div class="o-row main-form-signin">
+          <div
+            class="o-col--md12 o-col--sm12 o-content-flex information-text-form"
+          >
+            <div class="information-text-form information-text-form__header">
+              Zapisz się na wizytę już teraz!
             </div>
-            <div class="o-col--sm12 o-col--md12 o-content-flex">
-                <a class="o-col--md12 o-col--sm12 o-content-flex decoration-none o-content-margin--20">
-                    <button onclick="runPopup()" class="c-main-button c-main-button__ingallery">Zapisz</button>
-                </a>
+            <div
+              class="information-text-form information-text-form__description"
+            >
+              Wypełnij poniższy formularz. Po wprowadzeniu danych kliknij
+              przycisk Zapisz.
             </div>
+          </div>
+          <div class="o-col--md12 o-col--sm12">
+            <div
+              class="o-col--md4 o-col--sm8 information-text-form--bold-labels"
+            >
+              Dostępne zabiegi:
+            </div>
+          </div>
+
+          <div class="o-col--md12 o-col--sm12 o-content-flex-md">
+            <select
+              class="dropdown-select"
+              name="treatments"
+              id="treatments-select"
+              v-model="reservation.serviceType"
+            >
+              <option value="">Wybierz opcję:</option>
+              <option v-for="option in typesOfServices" :value="option.id">
+                {{ option.name }}
+              </option>
+            </select>
+          </div>
+          <div class="o-col--md12 o-col--sm12 o-content-flex o-text-center">
+            <div
+              class="o-col--md4 o-col--sm9 information-text-form--bold-labels"
+            >
+              Dane kontaktowe:
+            </div>
+          </div>
+          <div class="o-col--md4 o-col--sm12 o-content-flex">
+            <input
+              class="input-form"
+              v-model="reservation.name"
+              type="text"
+              placeholder="Imię"
+            />
+          </div>
+          <div class="o-col--md6 o-col--sm12 o-content-flex">
+            <input
+              class="input-form"
+              v-model="reservation.surname"
+              type="text"
+              placeholder="Nazwisko"
+            />
+          </div>
+          <div class="o-col--md4 o-col--sm12 o-content-flex--small2">
+            <input
+              class="input-form"
+              type="text"
+              placeholder="Nr telefonu"
+              maxlength="9"
+              v-model="reservation.phoneNumber"
+            />
+          </div>
+          <div class="o-col--md6 o-col--sm12 date-pack">
+            <div class="o-col--md6 o-col--sm7 o-content-revert-margin">
+              <input
+                v-model="selectedDate"
+                class="input-form input-form--center-text"
+                type="date"
+              />
+            </div>
+            <div class="o-col--md6 o-col--sm5 o-content-revert-margin">
+              <input
+                v-model="selectedTime"
+                class="input-form input-form--center-text"
+                type="time"
+              />
+            </div>
+          </div>
         </div>
+        <div class="o-col--sm12 o-col--md12 o-content-flex">
+          <a
+            class="
+              o-col--md12 o-col--sm12
+              o-content-flex
+              decoration-none
+              o-content-margin--20
+            "
+          >
+            <button
+              @click="sendReservation()"
+              class="c-main-button c-main-button__ingallery"
+            >
+              Zapisz
+            </button>
+            <!-- <button
+              onclick="runPopup()"
+              class="c-main-button c-main-button__ingallery"
+            >
+              Zapisz
+            </button> -->
+          </a>
+        </div>
+      </div>
     </div>
     <!--Popup sms-code-->
     <div id="popup-sms" class="popup-unseen">
-        <div class="position-right-exit">
-            <div class="circle-exit">
-                <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
-            </div>
+      <div class="position-right-exit">
+        <div class="circle-exit">
+          <i
+            class="fa fa-times icon-exit"
+            aria-hidden="true"
+            onclick="exitPopup()"
+          ></i>
         </div>
-        <div class="popup-text popup-text__summary--font">
-            Kod SMS
-            <i class="fa fa-mobile tet" aria-hidden="true"></i>
-        </div>
-        <div class="popup-text">Potwierdź swoją rejestrację za pomocą kodu SMS wysłanego pod numer:<br> 789 963 321
-        </div>
-        <!-- 5 cyfrowy token weryfikujący-->
-        <div class="popup-code-verify-form">
-            <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-            <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-            <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-            <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-            <input class="popup-code-input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-        </div>
-        <!-- Zapisz wprowadzony kod -->
-        <div class="popup-text popup-text__save">
-            <button id="popup-sms-destroy"
-                class="c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
-                onclick="runPopup2(), destroyPopupSMS()">Zapisz</button>
-        </div>
-        <!--  -->
-        <div class="popup-text popup-text__save">
-            <button id="popup-sms-destroy"
-                class="c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
-                onclick="runPopupCalendar()">Inne
-                terminy </button>
-        </div>
-        <!--Inny termin-->
-        <div id="popup-change" class="popup-text popup-text--new-term" onclick="changeTerm()">Wybierz ręcznie nowy
-            termin &#128197;
-        </div>
+      </div>
+      <div class="popup-text popup-text__summary--font">
+        Kod SMS
+        <i class="fa fa-mobile tet" aria-hidden="true"></i>
+      </div>
+      <div class="popup-text">
+        Potwierdź swoją rejestrację za pomocą kodu SMS wysłanego pod numer:<br />
+        789 963 321
+      </div>
+      <!-- 5 cyfrowy token weryfikujący-->
+      <div class="popup-code-verify-form">
+        <input
+          class="popup-code-input"
+          type="text"
+          maxlength="1"
+          size="1"
+          min="0"
+          max="9"
+          pattern="[0-9]{1}"
+        />
+        <input
+          class="popup-code-input"
+          type="text"
+          maxlength="1"
+          size="1"
+          min="0"
+          max="9"
+          pattern="[0-9]{1}"
+        />
+        <input
+          class="popup-code-input"
+          type="text"
+          maxlength="1"
+          size="1"
+          min="0"
+          max="9"
+          pattern="[0-9]{1}"
+        />
+        <input
+          class="popup-code-input"
+          type="text"
+          maxlength="1"
+          size="1"
+          min="0"
+          max="9"
+          pattern="[0-9]{1}"
+        />
+        <input
+          class="popup-code-input"
+          type="text"
+          maxlength="1"
+          size="1"
+          min="0"
+          max="9"
+          pattern="[0-9]{1}"
+        />
+      </div>
+      <!-- Zapisz wprowadzony kod -->
+      <div class="popup-text popup-text__save">
+        <button
+          id="popup-sms-destroy"
+          class="
+            c-main-button
+            c-main-button__ingallery
+            c-main-button__ingallery--popup-save
+          "
+          onclick="runPopup2(), destroyPopupSMS()"
+        >
+          Zapisz
+        </button>
+      </div>
+      <!--  -->
+      <div class="popup-text popup-text__save">
+        <button
+          id="popup-sms-destroy"
+          class="
+            c-main-button
+            c-main-button__ingallery
+            c-main-button__ingallery--popup-save
+          "
+          onclick="runPopupCalendar()"
+        >
+          Inne terminy
+        </button>
+      </div>
+      <!--Inny termin-->
+      <div
+        id="popup-change"
+        class="popup-text popup-text--new-term"
+        onclick="changeTerm()"
+      >
+        Wybierz ręcznie nowy termin &#128197;
+      </div>
     </div>
     <!-- Popup manual change term -->
     <div id="popup-change-term" class="popup-unseen">
-        <div class="position-right-exit">
-            <div class="circle-exit">
-                <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
-            </div>
+      <div class="position-right-exit">
+        <div class="circle-exit">
+          <i
+            class="fa fa-times icon-exit"
+            aria-hidden="true"
+            onclick="exitPopup()"
+          ></i>
         </div>
-        <div class="information-text-form information-text-form__header">Edytuj rezerwację</div>
-        <div class="o-col--md12 o-col--sm12 popup-position-input popup-position-input--select">
-            <select class="dropdown-select" name="treatments" id="treatments-select">
-                <option value="">Wybierz opcję:</option>
-                <optgroup label="Paznokcie">
-                    <option value="Hybryda">Hybryda</option>
-                <optgroup label="Medycyna estetyczna">
-                    <option value="Masaż">Masaż</option>
-                    <option value="poprawka">Poprawka</option>
-                    <option value="kwas">Kwas hialuronowy</option>
-                    <option value="kwas">Kwas medyczny</option>
-                    <option value="oxybrazja">Oxybrazja</option>
-            </select>
-        </div>
-        <div class="popup-position-input">
-            <div class="o-col--md6 o-col--sm12 o-content-flex">
-                <input class="input-form" type="text" placeholder="Imię">
-            </div>
-            <div class="o-col--md6 o-col--sm12 o-content-flex">
-                <input class="input-form" type="text" placeholder="Nazwisko">
-            </div>
-        </div>
-        <div class="popup-position-input">
-            <div class="o-col--md6 o-col--sm12 o-content-flex">
-                <input class="input-form" type="text" placeholder="Nr telefonu">
-            </div>
-        </div>
+      </div>
+      <div class="information-text-form information-text-form__header">
+        Edytuj rezerwację
+      </div>
+      <div
+        class="
+          o-col--md12 o-col--sm12
+          popup-position-input popup-position-input--select
+        "
+      >
+        <select
+          class="dropdown-select"
+          name="treatments"
+          id="treatments-select"
+        >
+          <option value="">Wybierz opcję:</option>
+          <optgroup label="Paznokcie">
+            <option value="Hybryda">Hybryda</option>
+          </optgroup>
 
-        <div class="popup-position-input">
-            <div class="o-col--md6 o-col--sm12 o-content-flex">
-                <input class="input-form" type="date" value="10.10.2010">
-            </div>
-            <div class="o-col--md6 o-col--sm12 o-content-flex">
-                <input class="input-form" type="time" value="10:00">
-            </div>
+          <optgroup label="Medycyna estetyczna">
+            <option value="Masaż">Masaż</option>
+            <option value="poprawka">Poprawka</option>
+            <option value="kwas">Kwas hialuronowy</option>
+            <option value="kwas">Kwas medyczny</option>
+            <option value="oxybrazja">Oxybrazja</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="popup-position-input">
+        <div class="o-col--md6 o-col--sm12 o-content-flex">
+          <input class="input-form" type="text" placeholder="Imię" />
         </div>
-        <div class="popup-text popup-text__save">
-            <button id="popup-sms-destroy"
-                class="o-col--md12 c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
-                onclick="runPopup2(), destroyPopupSMS()">Zapisz</button>
+        <div class="o-col--md6 o-col--sm12 o-content-flex">
+          <input class="input-form" type="text" placeholder="Nazwisko" />
         </div>
+      </div>
+      <div class="popup-position-input">
+        <div class="o-col--md6 o-col--sm12 o-content-flex">
+          <input class="input-form" type="text" placeholder="Nr telefonu" />
+        </div>
+      </div>
+
+      <div class="popup-position-input">
+        <div class="o-col--md6 o-col--sm12 o-content-flex">
+          <input class="input-form" type="date" value="10.10.2010" />
+        </div>
+        <div class="o-col--md6 o-col--sm12 o-content-flex">
+          <input class="input-form" type="time" value="10:00" />
+        </div>
+      </div>
+      <div class="popup-text popup-text__save">
+        <button
+          id="popup-sms-destroy"
+          class="
+            o-col--md12
+            c-main-button
+            c-main-button__ingallery
+            c-main-button__ingallery--popup-save
+          "
+          onclick="runPopup2(), destroyPopupSMS()"
+        >
+          Zapisz
+        </button>
+      </div>
     </div>
 
     <!--Popup done registration-->
     <div id="popup-confirm" class="popup-unseen">
-        <div class="position-right-exit">
+      <div class="position-right-exit"></div>
+      <div class="popup-text">
+        Dziękuję za potwierdzenie!
+        <br />Twoja wizyta została pomyślnie zarejestrowana. Przechodzę do
+        podsumowania..
+      </div>
+      <div class="check">
+        <div class="position-accept">
+          <div class="positive">
+            <i class="fa fa-check" aria-hidden="true" onclick="runPopup()"></i>
+          </div>
         </div>
-        <div class="popup-text">
-            Dziękuję za potwierdzenie!
-            <br>Twoja wizyta została pomyślnie zarejestrowana.
-            Przechodzę do podsumowania..
-        </div>
-        <div class="check">
-            <div class="position-accept">
-                <div class="positive">
-                    <i class="fa fa-check" aria-hidden="true" onclick="runPopup()"></i>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
     <!--Popup summary-->
     <div id="popup-summary" class="popup-unseen">
-        <div class="position-right-exit">
-            <div class="circle-exit">
-                <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
-            </div>
+      <div class="position-right-exit">
+        <div class="circle-exit">
+          <i
+            class="fa fa-times icon-exit"
+            aria-hidden="true"
+            onclick="exitPopup()"
+          ></i>
         </div>
-        <div class="popup-text popup-text__summary--font">Podsumowanie
-            <i class="fa fa-list-alt" aria-hidden="true"></i>
-        </div>
-        <div class="popup-text">Kwas medyczny</div>
-        <div class="popup-text">Janina Kowalska</div>
-        <div class="popup-text">502 456 852</div>
-        <div class="popup-text">25/06/2021</div>
-        <div class="popup-text popup-text__summary--cancel-info">*Jeśli chcesz anulować swoją wizytę zadzwoń pod numer
-            789 963 321</div>
+      </div>
+      <div class="popup-text popup-text__summary--font">
+        Podsumowanie
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+      </div>
+      <div class="popup-text">Kwas medyczny</div>
+      <div class="popup-text">Janina Kowalska</div>
+      <div class="popup-text">502 456 852</div>
+      <div class="popup-text">25/06/2021</div>
+      <div class="popup-text popup-text__summary--cancel-info">
+        *Jeśli chcesz anulować swoją wizytę zadzwoń pod numer 789 963 321
+      </div>
     </div>
     <!--Popup calendar-->
     <div id="popup-calendar" class="popup-unseen">
-        <div class="position-right-exit">
-            <div class="circle-exit">
-                <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
-            </div>
+      <div class="position-right-exit">
+        <div class="circle-exit">
+          <i
+            class="fa fa-times icon-exit"
+            aria-hidden="true"
+            onclick="exitPopup()"
+          ></i>
         </div>
-        <div class="popup-text popup-text__summary--font">
-            Ups...
-        </div>
-        <div class="popup-text">Wskazany termin jest już zajęty &#x1F62A;</div>
-        <!-- <div id="popup-change" class="popup-text popup-text--new-term" onclick="changeTerm()">Wybierz ręcznie nowy
+      </div>
+      <div class="popup-text popup-text__summary--font">Ups...</div>
+      <div class="popup-text">Wskazany termin jest już zajęty &#x1F62A;</div>
+      <!-- <div id="popup-change" class="popup-text popup-text--new-term" onclick="changeTerm()">Wybierz ręcznie nowy
             termin &#128197;
         </div> -->
-        <!--
+      <!--
             Dodać popup z ponownym wyborem terminu wizyty             
         -->
-        <!-- <div id="popup-change-term" class="popup-unseen">
+      <!-- <div id="popup-change-term" class="popup-unseen">
             <div class="position-right-exit">
                 <div class="circle-exit">
                     <i class="fa fa-times icon-exit" aria-hidden="true" onclick="exitPopup()"></i>
@@ -253,167 +428,151 @@
             </div>
 
         </div> -->
-        <div class="popup-text">
-            Przedstawiam najbliższe wolne terminy:
-        </div>
-        <div class="popup-text popup-text--term-label">Najbliższe 7 dni</div>
-        <div class="o-col-sm12 popup-calendar-position">
-            <div class="o-col--sm3 popup-calendar-days">
-                <div class="popup-text-calendar popup-text-calendar--date">
-                    02/06
-                </div>
-                <div class="popup-text-calendar">
-                    10:30
-                </div>
-            </div>
-
-            <div class="o-col--sm3 popup-calendar-days">
-                <div class="popup-text-calendar popup-text-calendar--date">
-                    10/06
-                </div>
-                <div class="popup-text-calendar">
-                    19:30
-                </div>
-            </div>
-
-            <div class="o-col--sm3 popup-calendar-days">
-                <div class="popup-text-calendar popup-text-calendar--date">
-                    12/06
-                </div>
-                <div class="popup-text-calendar">
-                    07:45
-                </div>
-            </div>
+      <div class="popup-text">Przedstawiam najbliższe wolne terminy:</div>
+      <div class="popup-text popup-text--term-label">Najbliższe 7 dni</div>
+      <div class="o-col-sm12 popup-calendar-position">
+        <div class="o-col--sm3 popup-calendar-days">
+          <div class="popup-text-calendar popup-text-calendar--date">02/06</div>
+          <div class="popup-text-calendar">10:30</div>
         </div>
 
-        <!--Unseen block calendar -> loadMoreTerm()-->
-        <div class="popup-text popup-text--term-label">Najbliższe 14 dni</div>
-        <div id="more-term" class="o-col-sm12 popup-calendar-position popup-calendar-position--unseen">
-
-            <div class="o-col--sm3 popup-calendar-days">
-                <div class="popup-text-calendar popup-text-calendar--date">
-                    02/06
-                </div>
-                <div class="popup-text-calendar">
-                    10:30
-                </div>
-            </div>
-
-            <div class="o-col--sm3 popup-calendar-days">
-                <div class="popup-text-calendar popup-text-calendar--date">
-                    10/06
-                </div>
-                <div class="popup-text-calendar">
-                    19:30
-                </div>
-            </div>
-
-            <div class="o-col--sm3 popup-calendar-days">
-                <div class="popup-text-calendar popup-text-calendar--date">
-                    12/06
-                </div>
-                <div class="popup-text-calendar">
-                    07:45
-                </div>
-            </div>
+        <div class="o-col--sm3 popup-calendar-days">
+          <div class="popup-text-calendar popup-text-calendar--date">10/06</div>
+          <div class="popup-text-calendar">19:30</div>
         </div>
 
-        <div id="moreArrow" class="popup-text more" onclick="loadMoreTerm()">
-            <i class="fa fa-arrow-down" aria-hidden="true"></i>
-            Więcej
+        <div class="o-col--sm3 popup-calendar-days">
+          <div class="popup-text-calendar popup-text-calendar--date">12/06</div>
+          <div class="popup-text-calendar">07:45</div>
         </div>
-        <div class="popup-text popup-text__save">
-            <button id="popup-sms-destroy"
-                class="o-col--md12 c-main-button c-main-button__ingallery c-main-button__ingallery--popup-save"
-                onclick="runPopup2(), destroyPopupSMS()">Zapisz</button>
+      </div>
+
+      <!--Unseen block calendar -> loadMoreTerm()-->
+      <div class="popup-text popup-text--term-label">Najbliższe 14 dni</div>
+      <div
+        id="more-term"
+        class="
+          o-col-sm12
+          popup-calendar-position popup-calendar-position--unseen
+        "
+      >
+        <div class="o-col--sm3 popup-calendar-days">
+          <div class="popup-text-calendar popup-text-calendar--date">02/06</div>
+          <div class="popup-text-calendar">10:30</div>
         </div>
+
+        <div class="o-col--sm3 popup-calendar-days">
+          <div class="popup-text-calendar popup-text-calendar--date">10/06</div>
+          <div class="popup-text-calendar">19:30</div>
+        </div>
+
+        <div class="o-col--sm3 popup-calendar-days">
+          <div class="popup-text-calendar popup-text-calendar--date">12/06</div>
+          <div class="popup-text-calendar">07:45</div>
+        </div>
+      </div>
+
+      <div id="moreArrow" class="popup-text more" onclick="loadMoreTerm()">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        Więcej
+      </div>
+      <div class="popup-text popup-text__save">
+        <button
+          id="popup-sms-destroy"
+          class="
+            o-col--md12
+            c-main-button
+            c-main-button__ingallery
+            c-main-button__ingallery--popup-save
+          "
+          onclick="runPopup2(), destroyPopupSMS()"
+        >
+          Zapisz
+        </button>
+      </div>
     </div>
 
-
     <script>
-        function runPopup() {
-            //sms
-            const popupSms = document.getElementById('popup-sms')
-            popupSms.classList.add('popup-visible');
-            //blur
-            const blurBody = document.querySelector(".syrius-black")
-            blurBody.classList.add('blur')
-            //scrollUP
-            window.scrollTo(0, 0)
+      function runPopup() {
+        //sms
+        const popupSms = document.getElementById("popup-sms");
+        popupSms.classList.add("popup-visible");
+        //blur
+        const blurBody = document.querySelector(".syrius-black");
+        blurBody.classList.add("blur");
+        //scrollUP
+        window.scrollTo(0, 0);
+      }
 
-        };
+      function destroyPopupSMS() {
+        const popupSms = document.getElementById("popup-sms");
+        popupSms.classList.remove("popup-visible");
+      }
 
-        function destroyPopupSMS() {
-            const popupSms = document.getElementById('popup-sms')
-            popupSms.classList.remove('popup-visible')
-        }
+      function runPopup2() {
+        // confirm
+        const popup = document.getElementById("popup-confirm");
+        popup.classList.add("popup-visible");
+        //const blurBody = document.querySelector(".syrius-black")
+        // summary
+        const popupSumarry = document.getElementById("popup-summary");
 
-        function runPopup2() {
-            // confirm
-            const popup = document.getElementById('popup-confirm')
-            popup.classList.add('popup-visible')
-            //const blurBody = document.querySelector(".syrius-black")
-            // summary 
-            const popupSumarry = document.getElementById('popup-summary');
+        setTimeout(function () {
+          popupSumarry.classList.add("popup-visible");
+          popup.classList.remove("popup-visible");
+          console.log("Destroy first popup");
+        }, 3000);
 
-            setTimeout(function () {
-                popupSumarry.classList.add('popup-visible')
-                popup.classList.remove('popup-visible')
-                console.log("Destroy first popup")
+        // blurBody.classList.add('blur')
+      }
 
-            }, 3000)
+      function runPopupCalendar() {
+        const popupCalendar = document.getElementById("popup-calendar");
+        popupCalendar.classList.add("popup-visible");
+        console.log("test");
 
-            // blurBody.classList.add('blur')
-        }
+        //destroy sms popup
+        const popupSms = document.getElementById("popup-sms");
+        popupSms.classList.remove("popup-visible");
+      }
 
-        function runPopupCalendar() {
-            const popupCalendar = document.getElementById('popup-calendar')
-            popupCalendar.classList.add('popup-visible')
-            console.log('test')
+      function changeTerm() {
+        const popupOtherTerm = document.getElementById("popup-change-term");
+        popupOtherTerm.classList.add("popup-visible");
+        console.log(popupOtherTerm);
+        const popupSms = document.getElementById("popup-sms");
+        popupSms.classList.remove("popup-visible");
+      }
 
-            //destroy sms popup
-            const popupSms = document.getElementById('popup-sms');
-            popupSms.classList.remove('popup-visible')
-        }
+      function loadMoreTerm() {
+        const moreTerm = document.getElementById("more-term");
+        const arrowMore = document.getElementById("moreArrow");
+        moreTerm.classList.remove("popup-calendar-position--unseen");
+        arrowMore.classList.add("unseen");
+      }
 
-        function changeTerm() {
+      function exitPopup() {
+        //popup SMS
+        const popupSms = document.getElementById("popup-sms");
+        popupSms.classList.remove("popup-visible");
+        // confirm
+        const popup = document.getElementById("popup-confirm");
+        popup.classList.remove("popup-visible");
+        //summary
+        const popupSumarry = document.getElementById("popup-summary");
+        popupSumarry.classList.remove("popup-visible");
+        //calendar
+        const popupCalendar = document.getElementById("popup-calendar");
+        popupCalendar.classList.remove("popup-visible");
+        // change term
+        const popupChangeTerm = document.getElementById("popup-change-term");
+        popupChangeTerm.classList.remove("popup-visible");
 
-            const popupOtherTerm = document.getElementById('popup-change-term');
-            popupOtherTerm.classList.add('popup-visible');
-            console.log(popupOtherTerm)
-            const popupSms = document.getElementById('popup-sms')
-            popupSms.classList.remove('popup-visible')
-        }
+        const blurBody = document.querySelector(".syrius-black");
 
-        function loadMoreTerm() {
-            const moreTerm = document.getElementById('more-term')
-            const arrowMore = document.getElementById('moreArrow')
-            moreTerm.classList.remove('popup-calendar-position--unseen')
-            arrowMore.classList.add('unseen')
-        }
-
-        function exitPopup() {
-            //popup SMS
-            const popupSms = document.getElementById('popup-sms');
-            popupSms.classList.remove('popup-visible')
-            // confirm
-            const popup = document.getElementById('popup-confirm');
-            popup.classList.remove('popup-visible')
-            //summary
-            const popupSumarry = document.getElementById('popup-summary')
-            popupSumarry.classList.remove('popup-visible')
-            //calendar
-            const popupCalendar = document.getElementById('popup-calendar')
-            popupCalendar.classList.remove('popup-visible')
-            // change term
-            const popupChangeTerm = document.getElementById('popup-change-term')
-            popupChangeTerm.classList.remove('popup-visible')
-
-            const blurBody = document.querySelector(".syrius-black")
-
-            blurBody.classList.remove('blur')
-        }
+        blurBody.classList.remove("blur");
+      }
     </script>
-</body>
-
+    <script src="./scripts/registerService.js"></script>
+  </body>
 </html>
