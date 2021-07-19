@@ -16,14 +16,26 @@ const instance = axios.create({
     },
     sendReservation: async (payload) => {
         const {data } = await instance.post('/service/signon', payload)
-        console.log(data)
         return data
     },
     createReservation: async (payload) => {
         const {data } = await instance.post('/reservations/create', payload)
-        console.log(data)
         return data
-
+    },
+    sendTokenSms: async (token) => {
+        const { data } = await instance.post('/reservations/confirm', {
+            pin: token
+        })
+        return data;
+    },
+    getNextAvailableDates: async (serviceStart, type) => {
+        console.log(serviceStart)
+        console.log(type)
+        const { data } = await instance.post('service/find/availabledates', {
+            serviceStart: serviceStart, 
+            type: type
+        })
+        return data.availabaleDates
     }
   }
 const app = new Vue({
@@ -36,6 +48,16 @@ const app = new Vue({
             serviceType: null,
         },
         confirmService: null,
+        reservationId: null,
+        client: null,
+        type: null,
+        service: null,
+        nextDates: [],
+        // Popups
+        isTokenPopup: false,
+        isConfirmPopup: false,
+        isSummaryPopup: false,
+        isCalendarPopup: false
     },
     async created() {
         const data = await api.getTypesOfServices();
@@ -61,28 +83,69 @@ const app = new Vue({
                 clientPhone: this.reservation.phoneNumber,
                 serviceId: this.confirmService.id
             }
-        }
+        },
     },
     methods: {
+        pickNextDate(date) {
+            this.selectedDate = moment(date).format("YYYY-MM-DD")
+            this.selectedTime = moment(date).format("HH:mm")
+            this.$forceUpdate();
+            console.log(this.reservation)
+            console.log(this.preparedReservation)
+        },
         async sendReservation() {
             try {
                 const data = await api.sendReservation(this.preparedReservation)
-                console.log(data)
                 this.confirmService = data;
-                const reservation = await api.createReservation(this.createReservationData)
-                console.log(reservation)
+                const { id } = await api.createReservation(this.createReservationData)
+                this.reservationId = id;
+                this.isTokenPopup = true;
+                this.isCalendarPopup = false
             } catch(e) {
+                const dates = await api.getNextAvailableDates(this.preparedReservation.serviceStart, this.preparedReservation.serviceType)
+                this.nextDates = dates;
+                this.isCalendarPopup = true;
+            }
+        },
+        getTokenInputValues() {
+            let token = ''
+            for(let i=1; i<=5; i++) {
+                token += this.$refs[`token${i}`].value
+            }
+            return token
+        },
+        getVerboseDate(date) {
+           return moment(date).format('DD/MM/YYYY HH:mm') 
+        },
+        async sendTokenSms() {
+            const token = this.getTokenInputValues();
+            try {
+                const data = await api.sendTokenSms(token)
+                this.client = data.client
+                this.type = data.type
+                this.service = data.service
+                if(data.status === 'ok') {
+                    this.isTokenPopup = false
+                    this.positiveAuth();
+                }
+            }catch(e) {
                 console.log(e)
             }
+        },
+        positiveAuth() {
+            this.isConfirmPopup = true
+            setTimeout(() => {
+                this.isSummaryPopup = true
+                this.isConfirmPopup = false
+              }, 3000);
+      
         }
     },
-    watch: {
-        reservation: {
-            deep: true,
-            handler() {
-                console.log(this.reservation)
-                console.log(this.serviceStart)
-            }
-        }
-    }
+    // watch: {
+    //     reservation: {
+    //         deep: true,
+    //         handler() {
+    //         }
+    //     }
+    // }
 })
